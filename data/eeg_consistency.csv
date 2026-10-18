@@ -1,0 +1,5 @@
+record,T,P,Kmax,selected_K,dmin,max_TD_error,reference
+0,1336,64,131,126,5,2.43e-13,historical official full trace
+1,1857,32,121,120,5,3.13e-13,official-validated cached implementation
+2,1754,64,172,173,5,2.77e-13,official-validated cached implementation
+3,1374,64,135,131,5,1.85e-13,official-validated cached implementation

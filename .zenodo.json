@@ -1,0 +1,48 @@
+{
+  "title": "HP-GSBS: SoftwareX reproducibility materials",
+  "upload_type": "software",
+  "description": "Reproducibility materials accompanying HP-GSBS: Accelerating greedy state boundary search with reusable interval statistics, by Yanzhe Zhao and Yongzhang Ji. Includes five figure sources, benchmark observations, synthetic inputs, CC BY 4.0 Sherlock/BBBD-derived analysis examples and portable rerun scripts for HP-GSBS 0.2.0. Original code: MIT; data, figures and documentation: CC BY 4.0. See LICENSE-DATA, DATA_SOURCES.md and THIRD_PARTY_NOTICES.md for attribution, transformations and per-material licensing. Independent archive from the HP-GSBS algorithm software.",
+  "creators": [
+    {
+      "name": "Zhao, Yanzhe",
+      "affiliation": "Tianjin University"
+    },
+    {
+      "name": "Ji, Yongzhang",
+      "affiliation": "Southwest University"
+    }
+  ],
+  "version": "1.0.0",
+  "publication_date": "2026-10-19",
+  "license": "CC-BY-4.0",
+  "access_right": "open",
+  "keywords": [
+    "GSBS",
+    "neuroscience",
+    "reproducibility",
+    "EEG",
+    "scientific software"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/JustinZHAO-05/HP-GSBS-SoftwareX-Reproducibility/tree/v1.0.0",
+      "relation": "isIdenticalTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "10.5281/zenodo.23422148",
+      "relation": "requires",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.6084/m9.figshare.12436955.v1",
+      "relation": "isDerivedFrom",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.15387/fcp_indi.retro.bbbd",
+      "relation": "isDerivedFrom",
+      "scheme": "doi"
+    }
+  ]
+}

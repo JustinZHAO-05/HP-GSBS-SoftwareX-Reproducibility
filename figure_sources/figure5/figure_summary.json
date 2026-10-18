@@ -1,0 +1,32 @@
+{
+  "data_source": "Existing submission-package release-development measurements",
+  "new_benchmarks_run": false,
+  "ablation_rows": 4,
+  "throughput_points": 22,
+  "direct_comparison_RSS_ratio": 8.38363800311501,
+  "direct_comparison_speedup": 88.37482804219378,
+  "long_input_RSS_MiB": [
+    191.10546875,
+    204.515625,
+    247.48046875,
+    469.5390625
+  ],
+  "CPU_workers": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "GPU_batches_short": [
+    1,
+    8,
+    32,
+    64
+  ],
+  "GPU_batches_high_K": [
+    1,
+    4,
+    8
+  ],
+  "error_bars": "observed minimum\u2013maximum over three timed runs or batches; no RSS error bars"
+}

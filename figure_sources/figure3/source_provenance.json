@@ -1,0 +1,45 @@
+{
+  "commit": "78d0df1a9b9528211251d70ae8098f9028d51e1d",
+  "files": [
+    {
+      "path": "results/bbbd_validation/sub-01_ses-01_stim01__all64__5.12hz__d5__k131.npz",
+      "git_blob_sha": "4dab40b39b143d993742117aba1074c12dbd3049",
+      "size_bytes": 434067
+    },
+    {
+      "path": "results/fixtures/0_full_cpu.npz",
+      "git_blob_sha": "51d28bcd961e7d06854c3fd40773ddbe02088fbb",
+      "size_bytes": 500164
+    },
+    {
+      "path": "results/fixtures/0_full_reference.npz",
+      "git_blob_sha": "90e4eecd571e8935633917bdb947a730931987b9",
+      "size_bytes": 501341
+    },
+    {
+      "path": "results/fixtures/0_torch-cuda_float64.npz",
+      "git_blob_sha": "0c3109e67941d8c56dc6c84bc7f6beb792d8ad84",
+      "size_bytes": 500372
+    },
+    {
+      "path": "results/fixtures/0_triton-cuda_float64.npz",
+      "git_blob_sha": "e8c2b13f4c853661126916b72910a752ae437784",
+      "size_bytes": 500356
+    }
+  ],
+  "reading": "All source NPZ files read with allow_pickle=False. No fits were rerun.",
+  "correlation_definition_source": "https://github.com/JustinZHAO-05/HP-GSBS/blob/6f3dac95f38d2d1b132677ec5e702f7b162b8a63/src/hpgsbs/core/tdistance.py",
+  "source_archive": "Author-supplied final submission package; exact source file identities retained below.",
+  "dataset": "Brain, Body, and Behavior Dataset (BBBD)",
+  "dataset_authors": [
+    "Jens Madsen",
+    "Nikhil Kuppa",
+    "Lucas C Parra"
+  ],
+  "dataset_url": "https://bbbd.pythonanywhere.com/",
+  "dataset_doi": "10.15387/fcp_indi.retro.bbbd",
+  "data_paper_doi": "10.1038/s41597-026-07215-1",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "processing": "Frozen study-preprocessed 64-channel EEG at 5.12 Hz (block means and z-scoring), converted to FP64 for fitting; GSBS saved outputs and time map. No further signal preprocessing for this reproduction package."
+}

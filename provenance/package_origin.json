@@ -1,0 +1,16 @@
+{
+  "source_package": "HP_GSBS_SoftwareX_Submission(1).zip",
+  "source_sha256": "2f0caa74abfb00654c83c09639635f9e00aed29b71ec03ddfcbaaef4243ce9ca",
+  "software_version": "0.2.0",
+  "software_commit": "b86b409169aa173d4a361d8cbcc633add1bfacf6",
+  "software_doi": "10.5281/zenodo.23422148",
+  "reference": "statesegmentation==0.0.6",
+  "packaged_materials": "Final submitted-package plotting data, five figure sources, benchmark tables, frozen derived examples and portable rerun scripts. Scientific numeric arrays are retained unchanged.",
+  "adaptations": [
+    "Supplement tables write to tables/ instead of manuscript/generated/.",
+    "Private-repository navigation replaced by dataset attribution and source identities.",
+    "Unused redundant Figure 1 matrix cache omitted; the plot recomputes it.",
+    "Submission documents, journal templates and internal development receipts excluded.",
+    "Large generated SVG files can be rebuilt from the included scripts."
+  ]
+}

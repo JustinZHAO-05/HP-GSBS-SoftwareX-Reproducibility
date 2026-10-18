@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "timed_observations": 140,
+  "configuration_seed_cases": 14,
+  "distinct_inputs": 10,
+  "synthetic_max_abs_tdistance_errors": {
+    "cpu-fast": 1.5120349416974932e-11,
+    "torch-cuda": 6.934897101018578e-12,
+    "triton-cuda": 6.934897101018578e-12
+  },
+  "scope": "Arithmetic and input-identity checks on supplied records; no model refit"
+}

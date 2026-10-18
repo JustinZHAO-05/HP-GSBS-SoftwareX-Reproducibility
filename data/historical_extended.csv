@@ -1,0 +1,22 @@
+measurement_scope,new_experiment,workload,backend,shape,kmax,seconds,min_s,max_s,timed_fits,speedup,source
+cross-session historical official / later release-wheel timing,False,Small,reference,"[450, 16]",20,48.03541359400003,46.622490466000045,48.307682004000014,3,1.0,historical official baseline
+cross-session historical official / later release-wheel timing,False,Small,cpu-fast,"[450, 16]",20,0.10291691300000139,0.10105805400000634,0.11969727899999327,3,466.7397436804132,published v0.2.0 wheel remeasurement
+cross-session historical official / later release-wheel timing,False,Small,torch-cuda,"[450, 16]",20,0.07548365499999932,0.06067291000000807,0.09483776999999805,3,636.3684110686011,published v0.2.0 wheel remeasurement
+cross-session historical official / later release-wheel timing,False,Small,triton-cuda,"[450, 16]",20,0.05672792699999718,0.05298705699999573,0.05680034600000283,3,846.7683579201197,published v0.2.0 wheel remeasurement
+cross-session historical official / later release-wheel timing,False,Medium,reference,"[900, 32]",30,349.94625700800003,346.57536119300005,363.74508401599996,3,1.0,historical official baseline
+cross-session historical official / later release-wheel timing,False,Medium,cpu-fast,"[900, 32]",30,0.3167980989999961,0.2925706529999985,0.34011868999999706,3,1104.6349650223258,published v0.2.0 wheel remeasurement
+cross-session historical official / later release-wheel timing,False,Medium,torch-cuda,"[900, 32]",30,0.09841863200000489,0.08935262299999636,0.16214431299999887,3,3555.691131817222,published v0.2.0 wheel remeasurement
+cross-session historical official / later release-wheel timing,False,Medium,triton-cuda,"[900, 32]",30,0.09783707799999775,0.0975207639999951,0.1311707119999994,3,3576.8265381761307,published v0.2.0 wheel remeasurement
+cross-session historical official / later release-wheel timing,False,Large,reference,"[1500, 64]",40,2213.493398001,2111.987987836,2233.266202226,3,1.0,historical official baseline
+cross-session historical official / later release-wheel timing,False,Large,cpu-fast,"[1500, 64]",40,0.8679228670000043,0.8558044930000079,0.9204940319999935,3,2550.334231487634,published v0.2.0 wheel remeasurement
+cross-session historical official / later release-wheel timing,False,Large,torch-cuda,"[1500, 64]",40,0.1715514899999988,0.1437667839999932,0.18078092199999674,3,12902.793196380955,published v0.2.0 wheel remeasurement
+cross-session historical official / later release-wheel timing,False,Large,triton-cuda,"[1500, 64]",40,0.21331203700000856,0.20032450299999027,0.3038016790000029,3,10376.786182023621,published v0.2.0 wheel remeasurement
+cross-session historical official / later release-wheel timing,False,XL,reference,"[2100, 64]",50,5011.254189807001,4924.70927537,5848.187411749997,3,1.0,historical official baseline
+cross-session historical official / later release-wheel timing,False,XL,cpu-fast,"[2100, 64]",50,1.9519382649999955,1.8097872950000067,1.9912124549999959,3,2567.3220714319123,published v0.2.0 wheel remeasurement
+cross-session historical official / later release-wheel timing,False,XL,torch-cuda,"[2100, 64]",50,0.3627016519999984,0.3218157090000062,0.5145574299999964,3,13816.463647667708,published v0.2.0 wheel remeasurement
+cross-session historical official / later release-wheel timing,False,XL,triton-cuda,"[2100, 64]",50,0.45606624500000237,0.3137830419999972,0.5616465640000001,3,10987.996249989901,published v0.2.0 wheel remeasurement
+cross-session historical official / later release-wheel timing,False,BBBD0,reference,"[1336, 64]",131,6115.378976057,6115.378976057,6115.378976057,1,1.0,historical official baseline
+cross-session historical official / later release-wheel timing,False,BBBD0,cpu-fast,"[1336, 64]",131,1.610130175000009,1.610130175000009,1.610130175000009,1,3798.06494593331,published v0.2.0 wheel remeasurement
+cross-session historical official / later release-wheel timing,False,BBBD0,torch-cuda,"[1336, 64]",131,0.8534690930000011,0.8534690930000011,0.8534690930000011,1,7165.31978277155,published v0.2.0 wheel remeasurement
+cross-session historical official / later release-wheel timing,False,BBBD0,triton-cuda,"[1336, 64]",131,0.8378832619999912,0.8378832619999912,0.8378832619999912,1,7298.605012659943,published v0.2.0 wheel remeasurement
+

@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "Cite this reproducibility package, HP-GSBS software and the original GSBS/data sources as applicable."
+title: "HP-GSBS: SoftwareX reproducibility materials"
+type: software
+authors:
+  - family-names: Zhao
+    given-names: Yanzhe
+    affiliation: Tianjin University
+  - family-names: Ji
+    given-names: Yongzhang
+    affiliation: Southwest University
+version: 1.0.0
+date-released: 2026-10-19
+license:
+  - MIT
+  - CC-BY-4.0
+repository-code: "https://github.com/JustinZHAO-05/HP-GSBS-SoftwareX-Reproducibility"
+abstract: >-
+  Reproducibility materials for HP-GSBS: Accelerating greedy state boundary
+  search with reusable interval statistics. Includes benchmark observations,
+  synthetic examples, CC BY 4.0 Sherlock/BBBD-derived analysis inputs, figure
+  sources, table regeneration and portable rerun scripts. Original code is MIT;
+  data, figures and documentation are CC BY 4.0 with source attribution.
+keywords:
+  - GSBS
+  - neuroscience
+  - reproducibility
+  - scientific software
+  - EEG

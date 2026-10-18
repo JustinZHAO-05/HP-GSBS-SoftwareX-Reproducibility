@@ -1,0 +1,4 @@
+-r requirements-figures.txt
+hpgsbs @ https://github.com/JustinZHAO-05/HP-GSBS/releases/download/v0.2.0/hpgsbs-0.2.0-py3-none-any.whl#sha256=43f1819b7d8c31adea736345210550b0a5aae4a247e77e363c6650b1b5db749b
+statesegmentation==0.0.6
+threadpoolctl>=3.1

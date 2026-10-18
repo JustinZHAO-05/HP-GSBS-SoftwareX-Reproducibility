@@ -1,0 +1,17 @@
+{
+  "software": "HP-GSBS 0.2.0",
+  "official": "statesegmentation 0.0.6",
+  "Python": "3.10.12",
+  "NumPy": "2.2.6",
+  "SciPy": "1.15.3",
+  "Numba": "0.68.0",
+  "PyTorch": "2.11.0+cu128",
+  "Triton": "3.6.0",
+  "CUDA runtime": "12.8",
+  "NVIDIA driver": "610.74",
+  "CPU": "AMD Ryzen 7 7840H",
+  "GPU": "NVIDIA GeForce RTX 4050 Laptop GPU (6 GB)",
+  "OS": "Ubuntu 22.04 under WSL2; Linux 6.6.87.2",
+  "precision": "FP64; TF32 disabled",
+  "threads": "BLAS, Numba and PyTorch: one"
+}

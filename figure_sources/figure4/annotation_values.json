@@ -1,0 +1,20 @@
+{
+  "central_configuration": {
+    "T": 512,
+    "P": 32,
+    "Kmax": 20
+  },
+  "central_runtime_median_seconds": {
+    "official": 64.66696925849999,
+    "cpu-fast": 0.1421586115000082,
+    "torch-cuda": 0.0812647535000223,
+    "triton-cuda": 0.0985964470000055
+  },
+  "highlight": {
+    "condition": "T3",
+    "backend": "torch-cuda",
+    "median": 1729.65179956205,
+    "min": 1470.8585135003614,
+    "max": 1988.4450856237384
+  }
+}

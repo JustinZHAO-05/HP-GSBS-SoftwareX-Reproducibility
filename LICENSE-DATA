@@ -1,0 +1,9 @@
+Data, derived examples, figures and documentation are distributed under the
+Creative Commons Attribution 4.0 International license (CC BY 4.0):
+https://creativecommons.org/licenses/by/4.0/
+Full legal text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+Credit the package authors for original material and the respective dataset
+authors for third-party material, link the license, and indicate modifications.
+Dataset-specific attribution and transformations are in DATA_SOURCES.md and
+THIRD_PARTY_NOTICES.md. Original code is MIT licensed as stated in LICENSE.

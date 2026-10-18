@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+new_*/
+figure_sources/figure1/Figure1_HP_GSBS.*
+figure_sources/figure1/data/recomputed_outputs.npz
+figure_sources/figure3/Figure_EEG_application.*
+figure_sources/figure4/Figure3_HP_GSBS.*
+figure_sources/figure5/Figure4_HP_GSBS*
+figures/*.svg

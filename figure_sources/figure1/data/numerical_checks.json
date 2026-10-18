@@ -1,0 +1,58 @@
+{
+  "input_shape": [
+    120,
+    4230
+  ],
+  "selected_K": 10,
+  "selected_boundaries": [
+    4,
+    17,
+    28,
+    39,
+    56,
+    64,
+    74,
+    86,
+    111
+  ],
+  "within_count": 805,
+  "adjacent_count": 1364,
+  "td_prefix": 67.89775167517344,
+  "td_scipy": 67.89775167517335,
+  "td_saved": 67.8977516751735,
+  "input_sha256": "a206e8e8d8392a3fdabe21f04b3ae729a91cafe89caea8035156c67f045cac2d",
+  "single_gain": 0.086647025084398,
+  "double_gain": 0.12429412757742206,
+  "candidate_step": {
+    "before_boundaries": [
+      39,
+      85,
+      111
+    ],
+    "single": 56,
+    "double": [
+      56,
+      74
+    ],
+    "TD_single": 40.90208234313073,
+    "TD_double": 33.81005308597442,
+    "accepted": "single",
+    "refinement": {
+      "from": 85,
+      "to": 86
+    }
+  },
+  "rectangle_query": {
+    "rows": [
+      39,
+      56
+    ],
+    "columns": [
+      56,
+      64
+    ],
+    "count": 136.0,
+    "sum": -21.624809528128353,
+    "sumsq": 6.367013244116976
+  }
+}

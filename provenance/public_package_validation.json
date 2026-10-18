@@ -1,0 +1,73 @@
+{
+  "validation_date": "2026-10-19",
+  "python": "3.12.14",
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pandas": "2.2.3",
+    "matplotlib": "3.10.8",
+    "numba": "0.68.0",
+    "hpgsbs": "0.2.0",
+    "statesegmentation": "0.0.6"
+  },
+  "checks": {
+    "paired_data_arithmetic": "passed: 140 timed observations, 14 configuration/seed cases, 10 distinct matrices",
+    "synthetic_input_hashes": "passed: all 14 recorded identities",
+    "saved_full_eeg_outputs": "passed: all four saved routes and time map",
+    "figure_regeneration": "passed: all five figures",
+    "supplementary_tables": "passed: all five tables",
+    "new_synthetic_cpu_vs_reference": {
+      "cpu-fast": {
+        "bounds_equal": true,
+        "nstates_equal": true,
+        "first_divergence": null,
+        "tdists_close": true,
+        "max_t_error": 1.5120349416974932e-11,
+        "patterns_close": true,
+        "strengths_close": true,
+        "validation_level": "finetune-move-trace",
+        "trace_compared": true,
+        "moves_compared": true,
+        "trace_skipped_reason": null,
+        "moves_skipped_reason": null,
+        "required_evidence_present": true,
+        "trace_values_close": true,
+        "first_numerical_divergence": null,
+        "passed": true
+      }
+    },
+    "new_eeg_cpu": {
+      "passed": true,
+      "software_version": "0.2.0",
+      "backend": "cpu-fast",
+      "selected_K": 126,
+      "all_boundaries_equal": true,
+      "max_absolute_tdistance_error": 2.433608869978343e-13,
+      "scope": "New CPU execution compared with archived full-record reference"
+    },
+    "new_sherlock_cpu_and_reference": {
+      "passed": true,
+      "selected_K": 10,
+      "all_boundaries_equal": true,
+      "max_absolute_tdistance_error": 1.5631940186722204e-13
+    },
+    "new_paired_cpu_subset": {
+      "conditions": [
+        "T1",
+        "T2"
+      ],
+      "seeds": [
+        20261017,
+        20261018
+      ],
+      "routes": [
+        "official",
+        "cpu-fast"
+      ],
+      "executions_including_warmups": 20,
+      "all_output_comparisons_passed": true
+    }
+  },
+  "gpu_execution_in_this_validation": false,
+  "gpu_evidence": "Existing archived CUDA outputs checked numerically; no GPU benchmark rerun in this environment."
+}
