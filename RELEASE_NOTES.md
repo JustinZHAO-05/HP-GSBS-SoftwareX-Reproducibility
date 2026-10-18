@@ -1,3 +1,7 @@
+# v1.0.1 — Zenodo integration release
+
+Updates citation and archive metadata to version 1.0.1 and points the archive identity to the v1.0.1 tag. Published after enabling the repository in Zenodo, so its GitHub release can be archived automatically with an independent DOI. Scientific input arrays, recorded observations and reproduction scripts are unchanged from v1.0.0. The existing validation receipt remains applicable.
+
 # v1.0.0 — Paper reproducibility materials
 
 First public snapshot for “HP-GSBS: Accelerating greedy state boundary search with reusable interval statistics.”

@@ -1,3 +1,7 @@
+# Zenodo integration release: v1.0.1
+
+The repository owner enabled GitHub integration after v1.0.0. Version v1.0.1 updates the archive metadata and is published to trigger automatic Zenodo archiving. The archive DOI will be recorded in the README and CITATION.cff after Zenodo confirms publication. The original manual-upload instructions below remain available for v1.0.0.
+
 # Archive this package with an independent DOI
 
 This is a separate research output from the algorithm software DOI

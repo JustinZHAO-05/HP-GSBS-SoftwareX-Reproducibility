@@ -2,7 +2,7 @@
 
 Data and scripts accompanying **“HP-GSBS: Accelerating greedy state boundary search with reusable interval statistics”**, by Yanzhe Zhao and Yongzhang Ji.
 
-This repository reconstructs the five paper figures and supplementary tables from archived observations, and supplies portable scripts for new experiments. The algorithm itself is maintained in [HP-GSBS](https://github.com/JustinZHAO-05/HP-GSBS), fixed here to **0.2.0**, [software DOI: 10.5281/zenodo.23422148](https://doi.org/10.5281/zenodo.23422148). This reproducibility repository has its own version series starting at **v1.0.0**.
+This repository reconstructs the five paper figures and supplementary tables from archived observations, and supplies portable scripts for new experiments. The algorithm itself is maintained in [HP-GSBS](https://github.com/JustinZHAO-05/HP-GSBS), fixed here to **0.2.0**, [software DOI: 10.5281/zenodo.23422148](https://doi.org/10.5281/zenodo.23422148). This reproducibility repository has its own version series; the Zenodo integration release is **v1.0.1**.
 
 ## Reproduce the paper figures and tables
 
