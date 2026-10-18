@@ -4,6 +4,10 @@ Data and scripts accompanying **“HP-GSBS: Accelerating greedy state boundary s
 
 This repository reconstructs the five paper figures and supplementary tables from archived observations, and supplies portable scripts for new experiments. The algorithm itself is maintained in [HP-GSBS](https://github.com/JustinZHAO-05/HP-GSBS), fixed here to **0.2.0**, [software DOI: 10.5281/zenodo.23422148](https://doi.org/10.5281/zenodo.23422148). This reproducibility repository has its own version series; the Zenodo integration release is **v1.0.1**.
 
+**Reproducibility archive, version 1.0.1:** [10.5281/zenodo.23457342](https://doi.org/10.5281/zenodo.23457342).
+
+**All versions:** [10.5281/zenodo.23457341](https://doi.org/10.5281/zenodo.23457341). Use the version DOI to cite the exact paper materials.
+
 ## Reproduce the paper figures and tables
 
 Python 3.10+; no GPU, HP-GSBS installation or private repository access is needed for these commands:
@@ -60,7 +64,7 @@ python scripts/run_consistency_example.py --output new_all_route_consistency --b
 
 ## Citation and credits
 
-Use `CITATION.cff` for this reproducibility package. The independent archive DOI will appear here after Zenodo publication; the software DOI above identifies the software, not this package. See [docs/ZENODO.md](docs/ZENODO.md) for archive setup and metadata. Cite the original GSBS papers and the datasets when using them; BibTeX entries are provided in `references.bib`.
+Use `CITATION.cff` for this reproducibility package. The reproducibility archive DOI is **10.5281/zenodo.23457342** (version 1.0.1); the software DOI above identifies the algorithm software. See [docs/ZENODO.md](docs/ZENODO.md) for archive setup and metadata. Cite the original GSBS papers and the datasets when using them; BibTeX entries are provided in `references.bib`.
 
 **Yanzhe Zhao** — main contributor and maintainer; algorithm implementation, experiments, data preparation, figures and manuscript. **Yongzhang Ji** — contributed theoretical/methodological analysis and manuscript review. Paper contribution statements remain in the manuscript.
 

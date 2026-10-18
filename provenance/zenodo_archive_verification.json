@@ -1,0 +1,24 @@
+{
+  "record_url": "https://zenodo.org/records/23457342",
+  "version_doi": "10.5281/zenodo.23457342",
+  "concept_doi": "10.5281/zenodo.23457341",
+  "version": "1.0.1",
+  "github_tag": "v1.0.1",
+  "github_commit": "c5b8713f6c8008ab106c717ee486e3c68211b5b2",
+  "archive_filename": "JustinZHAO-05/HP-GSBS-SoftwareX-Reproducibility-v1.0.1.zip",
+  "archive_size_bytes": 8913919,
+  "archive_checksum": "md5:0d285ee5cc5d3b7ad846effed4a3d497",
+  "archive_sha256": "1816858847e06e0a23d088de2b6ea87d28bad03b714f8698e2afa09f44231bd6",
+  "release_file_hashes_verified": 94,
+  "archive_manifest_matches_git_tag": true,
+  "creators": [
+    {
+      "name": "Zhao, Yanzhe",
+      "affiliation": "Tianjin University"
+    },
+    {
+      "name": "Ji, Yongzhang",
+      "affiliation": "Southwest University"
+    }
+  ]
+}
