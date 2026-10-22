@@ -1,10 +1,21 @@
-# Unreleased — Four-record EEG reproducibility addition (2026-10-22)
+# v1.1.0 — Complete EEG/fMRI research materials (2026-10-22)
+
+- Adopted the journal-neutral title **HP-GSBS: Reproducibility Materials for Neural-State Segmentation and Performance Evaluation**, with the repository URL retained.
+- Consolidated all four frozen BBBD EEG matrices, time maps, saved FP64 outputs and provenance. Recording 1 includes the original complete reference output; Recordings 2–4 retain the historically official-validated CPU reference chain.
+- Added the complete Sherlock group/16-participant application: 17 saved segmentations, configuration, fit times, selected boundaries, state-count curves, 120-pair alignment and 1,000 circular-shift scores.
+- Added public input acquisition/checking and new-fit scripts for the versioned Figshare source; Figure 6 and its compact cache; the six-figure renderer; fMRI and complete-file manifest checks.
+- Included the current author manuscript and Online Resource 1 prepared for Neuroinformatics. Figure 3 retains the high-contrast state boxes; Figures 5 and 6 retain the approved figure/body layout in the manuscript.
+- Retained the controlled benchmark observations and historical performance values. fMRI application times have a separate scope from official-comparison speedups. Existing resource measurements retain their original release-development settings.
+- Updated citation/archive metadata, dataset access notes, transformations and MIT/CC BY 4.0 attribution. Algorithm software remains **HP-GSBS 0.2.0**, commit `b86b409169aa173d4a361d8cbcc633add1bfacf6`, DOI `10.5281/zenodo.23422148`.
+- Previous release tags and the v1.0.1 DOI `10.5281/zenodo.23457342` retain their original files and title. Use the v1.1.0 release or exact commit for this expanded collection; version-specific Zenodo metadata is tracked in `docs/ZENODO.md`.
+
+# Four-record EEG addition — development history (2026-10-22)
 
 - Added the remaining three frozen BBBD Experiment 3 inputs and time maps, complete historical FP64 CPU/PyTorch CUDA/Triton outputs and pipeline outputs. Recording 1 reuses the existing Figure 3 files.
 - Added per-record provenance, immutable source identities, distinct file/value/pipeline hashes, parameters, historical validation receipts and offline verification of all four records at atol=rtol=1e-8.
 - Added an optional HP-GSBS 0.2.0 rerun script for any or all four inputs, with separate output directories. No official or HP fits were executed to prepare this addition.
 - Updated source attribution, processing and public data scope. Complete official reference output remains available for Recording 1; Recordings 2–4 retain the historically validated CPU reference chain.
-- Original software release, reproducibility tags and Zenodo v1.0.1 remain unchanged. This working-tree addition is not included in the v1.0.1 DOI and has not yet received a new version DOI.
+- Original software release, reproducibility tags and Zenodo v1.0.1 remain unchanged. At this development stage, the addition was identified by its fixed Git commit and was outside the v1.0.1 DOI.
 
 # v1.0.1 — Zenodo integration release
 

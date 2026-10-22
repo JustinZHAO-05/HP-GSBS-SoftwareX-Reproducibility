@@ -47,9 +47,10 @@ def main() -> None:
                 np.testing.assert_array_equal(a[route+'__all_bounds'], a['official__all_bounds'])
         assert max(errors.values()) < 1.6e-11
     eeg = runpy.run_path(str(ROOT/'data/eeg/verify_eeg_all.py'))['verify']()
+    fmri = runpy.run_path(str(ROOT/'scripts/verify_fmri.py'))['verify']()
     print(json.dumps(dict(passed=True, eeg_recordings_verified=len(eeg['records']), timed_observations=len(raw),
         configuration_seed_cases=14, distinct_inputs=n_inputs,
-        synthetic_max_abs_tdistance_errors=errors,
+        synthetic_max_abs_tdistance_errors=errors,fmri=fmri,
         scope='Arithmetic and input-identity checks on supplied records; no model refit'), indent=2))
 
 if __name__ == '__main__':

@@ -1,30 +1,36 @@
 cff-version: 1.2.0
-message: "Cite this reproducibility package, HP-GSBS software and the original GSBS/data sources as applicable."
-title: "HP-GSBS: SoftwareX reproducibility materials"
+message: "Cite the exact research-material release or commit, HP-GSBS 0.2.0, the original GSBS papers and the datasets as applicable."
+title: "HP-GSBS: Reproducibility Materials for Neural-State Segmentation and Performance Evaluation"
 type: software
 authors:
   - family-names: Zhao
     given-names: Yanzhe
-    affiliation: Tianjin University
+    affiliation: "School of Future Technology, Tianjin University"
   - family-names: Ji
     given-names: Yongzhang
-    affiliation: Southwest University
-version: 1.0.1
-date-released: 2026-10-19
-doi: "10.5281/zenodo.23457342"
+    affiliation: "Faculty of Psychology, Southwest University"
+version: 1.1.0
+date-released: 2026-10-22
 license:
   - MIT
   - CC-BY-4.0
 repository-code: "https://github.com/JustinZHAO-05/HP-GSBS-SoftwareX-Reproducibility"
+url: "https://github.com/JustinZHAO-05/HP-GSBS-SoftwareX-Reproducibility/releases/tag/v1.1.0"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23457341"
+    description: "All-versions research-material archive"
 abstract: >-
-  Reproducibility materials for HP-GSBS: Accelerating greedy state boundary
-  search with reusable interval statistics. Includes benchmark observations,
-  synthetic examples, CC BY 4.0 Sherlock/BBBD-derived analysis inputs, figure
-  sources, table regeneration and portable rerun scripts. Original code is MIT;
-  data, figures and documentation are CC BY 4.0 with source attribution.
+  Independent reproducibility materials for HP-GSBS neural-state segmentation:
+  six figure sources, controlled benchmark observations and tables, four BBBD
+  EEG analysis matrices and saved FP64 outputs, and a complete Sherlock fMRI
+  group/16-participant application with boundary-alignment statistics, source
+  provenance and public rerun scripts. Original code is MIT; source datasets
+  and applicable derived materials retain CC BY 4.0 attribution.
 keywords:
   - GSBS
-  - neuroscience
+  - neural state segmentation
+  - neuroinformatics
   - reproducibility
-  - scientific software
   - EEG
+  - fMRI

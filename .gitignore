@@ -8,3 +8,6 @@ figure_sources/figure3/Figure_EEG_application.*
 figure_sources/figure4/Figure3_HP_GSBS.*
 figure_sources/figure5/Figure4_HP_GSBS*
 figures/*.svg
+
+external/
+figure_sources/figure6/figure6_fmri.*

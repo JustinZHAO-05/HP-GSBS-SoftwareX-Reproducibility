@@ -1,0 +1,52 @@
+{
+  "group_selected_K": 60,
+  "group_elapsed_s": 13.555564003999962,
+  "pilot_group_elapsed_s": 16.795940942999977,
+  "subject_K_min": 19,
+  "subject_K_median": 56.5,
+  "subject_K_max": 61,
+  "subject_elapsed_min_s": 11.87653043299997,
+  "subject_elapsed_median_s": 12.380691023999987,
+  "subject_elapsed_max_s": 13.154320358000007,
+  "full_cohort_total_fit_s": 213.10277879699987,
+  "group_at_or_above_search_cap": true,
+  "subjects_at_or_above_search_cap": [
+    0,
+    3,
+    6,
+    7,
+    8,
+    11,
+    15
+  ],
+  "observed_F1": 0.4140970362656763,
+  "null_mean": 0.3248678058262841,
+  "null_empirical_95_interval": [
+    0.31481202280105064,
+    0.3353517749178047
+  ],
+  "monte_carlo_p": 0.000999000999000999,
+  "full_cohort_fits": 17,
+  "pilot_fits": 1,
+  "total_fits_including_pilot": 18,
+  "official_fits": 0,
+  "actual_max_evaluated_K_by_case": {
+    "group_mean": 60,
+    "subject_00": 60,
+    "subject_01": 61,
+    "subject_02": 61,
+    "subject_03": 60,
+    "subject_04": 60,
+    "subject_05": 60,
+    "subject_06": 61,
+    "subject_07": 60,
+    "subject_08": 60,
+    "subject_09": 60,
+    "subject_10": 60,
+    "subject_11": 61,
+    "subject_12": 60,
+    "subject_13": 60,
+    "subject_14": 60,
+    "subject_15": 61
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "dataset": "Sherlock data for OHBM",
+  "creator": "Christopher Baldassano",
+  "dataset_version": "1",
+  "dataset_doi": "10.6084/m9.figshare.12436955.v1",
+  "original_study_doi": "10.1038/nn.4450",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source": {
+    "filename": "Sherlock_AG_movie.npy",
+    "url": "https://ndownloader.figshare.com/files/22927253",
+    "bytes": 256101248,
+    "md5": "f80dde9a451e140c39b98c2e5214d93c",
+    "sha256_file": "9a7fcf713a7163c1ffb3cf134bf41b637f24702cf438fb34a56bfdd980dfc8ec",
+    "dtype": "float32",
+    "shape": [
+      16,
+      946,
+      4230
+    ],
+    "TR_seconds": 1.5
+  },
+  "processing": [
+    "Use all 946 supplied TRs and all 4230 angular-gyrus voxels.",
+    "Convert each participant matrix to FP64.",
+    "Form the group matrix by accumulating each FP64 participant matrix divided by 16.",
+    "Display cache: 72 evenly spaced group-response voxels, per-timepoint spatial z-score with sample SD, clipped to [-3, 3]."
+  ],
+  "software": {
+    "version": "0.2.0",
+    "commit": "b86b409169aa173d4a361d8cbcc633add1bfacf6",
+    "doi": "10.5281/zenodo.23422148",
+    "backend": "cpu-fast",
+    "dtype": "float64",
+    "q_strategy": "full",
+    "td_backend": "prefix2d",
+    "candidate_backend": "streaming",
+    "mode": "latency",
+    "blas_threads": 1,
+    "numba_threads": 1
+  },
+  "algorithm": {
+    "kmax": 60,
+    "statewise_detection": true,
+    "finetune": 1,
+    "finetune_order": true,
+    "blocksize": 50,
+    "dmin": 1
+  },
+  "boundary_matching": {
+    "tolerance_TR": 3,
+    "pairs": 120,
+    "null": "Independent nonzero circular shifts per participant; linear-axis matching after modulo 946",
+    "draws": 1000,
+    "seed": 20261020
+  },
+  "saved_output_fields": [
+    "selected_K",
+    "boundary_indices",
+    "evaluated_K_indices",
+    "all_bounds",
+    "tdists"
+  ],
+  "paths": {
+    "outputs": "data/fmri/*_segmentation.npz",
+    "results": "data/fmri/results.json",
+    "figure_cache": "data/fmri/figure6_data.npz",
+    "rerun": "scripts/run_sherlock.py",
+    "download": "scripts/download_sherlock.py",
+    "verification": "scripts/verify_fmri.py"
+  }
+}

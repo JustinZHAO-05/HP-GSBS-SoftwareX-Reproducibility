@@ -1,71 +1,81 @@
-# HP-GSBS: Reproducibility materials
+# HP-GSBS: Reproducibility Materials for Neural-State Segmentation and Performance Evaluation
 
-Data and scripts accompanying **“HP-GSBS: Accelerating greedy state boundary search with reusable interval statistics”**, by Yanzhe Zhao and Yongzhang Ji.
+Data and scripts for **HP-GSBS: Accelerating greedy state boundary search with reusable interval statistics**, by Yanzhe Zhao and Yongzhang Ji. This independent research package reconstructs six main figures and the accompanying numerical tables, supplies four frozen BBBD EEG analysis inputs and saved outputs, and provides the complete Sherlock angular-gyrus application for a group response and 16 participants.
 
-This repository reconstructs the five paper figures and supplementary tables from archived observations, and supplies portable scripts for new experiments. The algorithm itself is maintained in [HP-GSBS](https://github.com/JustinZHAO-05/HP-GSBS), fixed here to **0.2.0**, [software DOI: 10.5281/zenodo.23422148](https://doi.org/10.5281/zenodo.23422148). This reproducibility repository has its own version series; the last Zenodo integration release is **v1.0.1**. The current Git branch additionally includes all four frozen EEG inputs and saved FP64 results in [data/eeg](data/eeg/README.md). Those additions are not part of the older v1.0.1 DOI; use the exact Git commit until a new version is archived.
+**Research-material version: 1.1.0.** The [algorithm software](https://github.com/JustinZHAO-05/HP-GSBS) remains fixed to **0.2.0**, release commit `b86b409169aa173d4a361d8cbcc633add1bfacf6`, [software DOI 10.5281/zenodo.23422148](https://doi.org/10.5281/zenodo.23422148).
 
-**Reproducibility archive, version 1.0.1:** [10.5281/zenodo.23457342](https://doi.org/10.5281/zenodo.23457342).
+The [current author manuscript and Online Resource 1](manuscript/README.md) are prepared for *Neuroinformatics*. The [arXiv preprint](https://arxiv.org/abs/2610.25898) supplies the current persistent article identifier. See [release notes](RELEASE_NOTES.md) and [archive identities](docs/ZENODO.md) for the research-material version history.
 
-**All versions:** [10.5281/zenodo.23457341](https://doi.org/10.5281/zenodo.23457341). Use the version DOI to cite the exact paper materials.
+## Resources
 
-## Reproduce the paper figures and tables
+| Resource | Contents |
+|---|---|
+| [Current manuscript](manuscript/HP_GSBS_Neuroinformatics_Main.pdf) · [Online Resource 1](manuscript/ESM_1.pdf) | Computational formulation, numerical and neuroscience applications; Sections S1–S8 with full protocols and tables |
+| [BBBD EEG](data/eeg/README.md) | Four frozen time × channel matrices, 5.12-Hz time maps, configurations, FP64 results and reference-chain history |
+| [Sherlock fMRI](data/fmri/README.md) | Seventeen saved segmentations, fit times, 120-pair alignment analysis, 1,000 null scores and public-input acquisition/rerun commands |
+| [Figure sources](figure_sources/) · [Rendered figures](figures/) | Six figures, including the full-length Sherlock application; shared captions in `figure_sources/captions.tex` |
+| [Controlled observations](data/) · [Tables](tables/) | All 140 timed observations and the recorded ablation, memory, throughput and recovery results |
+| [Data sources](DATA_SOURCES.md) · [Attribution](THIRD_PARTY_NOTICES.md) | Dataset identities, processing, acquisition and per-material licensing |
 
-Python 3.10+; no GPU, HP-GSBS installation or private repository access is needed for these commands:
+## Rebuild figures and tables
+
+Python 3.10+; these commands read supplied arrays and run on CPU with the plotting dependencies:
 
 ```bash
 python -m pip install -r requirements-figures.txt
 python scripts/verify_manifest.py
 python scripts/verify_data.py
-python scripts/generate_inputs.py
-python scripts/verify_eeg.py
 python scripts/make_figures.py
 python scripts/make_supplement_tables.py
 ```
 
-Rendered figures are written to `figures/`, and LaTeX table rows to `tables/`. Figure-specific scripts also write intermediate renderings beside their source. PDF/SVG/PNG formats can be rebuilt; the initial repository includes PDF/PNG previews. Re-rendering can change file bytes across plotting-library versions without changing the data. `requirements-figures-frozen.txt` records the environment used to validate this public package.
+Run the manifest check before regeneration, since PDF metadata and rendering-library versions can change output file bytes. Figures are written to `figures/`, and LaTeX table rows to `tables/`. All six figures can be rebuilt without fitting GSBS, downloading the full Sherlock input or accessing private repositories. The recorded plotting environment is in `requirements-figures-frozen.txt`.
 
-| Figure | Content | Supplied source |
+For targeted checks, use `python scripts/verify_eeg.py` for all four EEG records and `python scripts/verify_fmri.py` for the 17 fMRI outputs and saved alignment statistics. The optional `--recompute-null` flag reconstructs the seeded circular-shift scores from saved boundaries. `scripts/generate_inputs.py` independently reproduces the controlled synthetic input identities.
+
+| Figure | Content | Numerical input |
 |---|---|---|
-| 1 | Interval reuse, candidate search and t-distance mechanism | Sherlock-derived 120-TR angular-gyrus mean, saved trace and plotting scripts |
-| 2 | Synthetic signal and numerical agreement | Recorded synthetic input and backend outputs |
-| 3 | Full-record EEG segmentation and state-count selection | Frozen BBBD-derived matrix, time map and four saved outputs |
-| 4 | Controlled paired runtime and speedup | Per-input, timed-run and aggregate CSVs |
-| 5 | Ablation, memory and throughput | Recorded component, memory and throughput CSVs |
+| 1 | Interval reuse, candidate search and t-distance | Sherlock 120-TR group-response excerpt and saved search trace |
+| 2 | Synthetic numerical agreement | Recorded illustrative signal and backend outputs |
+| 3 | BBBD EEG segmentation | Recording 1, time map and complete saved outputs |
+| 4 | Controlled runtime and paired speedup | Timed observations and per-input/aggregate CSVs |
+| 5 | Ablation, memory and throughput | Archived component and resource measurements |
+| 6 | Naturalistic fMRI and intersubject analysis | Seventeen segmentations, display cache and circular-shift statistics |
 
-The primary paired benchmark has **14 configuration/seed cases, 10 distinct matrices and 140 timed observations**. The seven configurations each use two seeds; Kmax scaling reuses the same inputs. The original 42 optimized warm-ups are excluded from the timing CSV. Observed min–max ranges summarize the recorded inputs. Historical extended-workload comparisons are kept in their own table.
+The controlled benchmark contains seven configurations with two seeds: **14 configuration/seed cases, 10 distinct input matrices and 140 timed observations**. The 42 optimized warm-ups are recorded in the protocol, separately from the timing CSV. Observed ranges summarize the recorded inputs or repetitions. Historical cross-session comparisons and release-development resource measurements retain their original measurement scopes. The fMRI fit times describe the separate application and use their own table.
 
-## Run new fits
+## Run new analyses
 
-Install the fixed software and reference dependencies:
+Install the fixed release and reference dependencies in a separate environment:
 
 ```bash
 python -m pip install -r requirements-rerun.txt
+python scripts/research_workflow.py
+python scripts/run_eeg_all.py --backend cpu-fast --output new_eeg_cpu
+python scripts/download_sherlock.py --output external/Sherlock_AG_movie.npy
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 \
+MKL_NUM_THREADS=1 NUMBA_NUM_THREADS=1 \
+python scripts/run_sherlock.py \
+    --input external/Sherlock_AG_movie.npy \
+    --output new_sherlock_results --kmax 60 \
+    --subjects all --perm 1000 --tolerance 3 --null-seed 20261020
+```
+
+The Sherlock download helper checks byte count, MD5, array shape and dtype. The analysis retains all 946 TRs and 4,230 voxels. [The fMRI README](data/fmri/README.md) and Online Resource 1, Section S8 specify the processing, parameters, output schema and statistics. New runs use a new output directory and retain their own machine-specific times.
+
+The original synthetic and paired-benchmark commands remain available:
+
+```bash
 python scripts/run_consistency_example.py --output new_consistency
-python scripts/run_eeg_example.py --output new_eeg
-python figure_sources/figure1/reproduce_analysis.py
 python scripts/run_paired_benchmark.py --output new_cpu_benchmark --backends official cpu-fast --only T1 T2
 ```
 
-Omit `--only T1 T2` to run all seven CPU benchmark configurations. Results from new runs are separate from archived manuscript measurements; timings depend on the machine. The recorded experiment environment is in `data/environment.json`.
+CUDA reruns additionally require compatible PyTorch/Triton installations following the [software documentation](https://github.com/JustinZHAO-05/HP-GSBS/tree/v0.2.0). EEG and synthetic rerun scripts accept `torch-cuda` and `triton-cuda` as appropriate. The historical measurement environment is recorded in `data/environment.json`.
 
-For all four routes, install compatible CUDA PyTorch and Triton following the [software installation instructions](https://github.com/JustinZHAO-05/HP-GSBS/tree/v0.2.0), then run:
+## Licenses and citation
 
-```bash
-python scripts/run_paired_benchmark.py --output new_four_route_benchmark
-python scripts/run_consistency_example.py --output new_all_route_consistency --backends cpu-fast torch-cuda triton-cuda
-```
+Original repository code is **MIT** ([LICENSE](LICENSE)). Source datasets and applicable derived inputs, numerical materials, figures and documentation retain **CC BY 4.0** attribution ([LICENSE-DATA](LICENSE-DATA), [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)). The source collection and dataset credit remain with the BBBD and Sherlock creators.
 
-## Data access and licensing
+Cite this package using the exact [release](https://github.com/JustinZHAO-05/HP-GSBS-SoftwareX-Reproducibility/releases/tag/v1.1.0) or Git commit and `CITATION.cff`. The research archive series is [10.5281/zenodo.23457341](https://doi.org/10.5281/zenodo.23457341); the earlier **v1.0.1** archive remains [10.5281/zenodo.23457342](https://doi.org/10.5281/zenodo.23457342). Version-specific archive identities are maintained in [docs/ZENODO.md](docs/ZENODO.md). Cite HP-GSBS 0.2.0, the original GSBS papers and the datasets when using them; BibTeX source entries are in `references.bib`.
 
-**Both source datasets explicitly permit reuse under CC BY 4.0.** The derived inputs needed for Figures 1 and 3 and **all four EEG comparison recordings** are included with attribution, transformations and source links. The package does not contain stimulus videos, the complete original datasets, questionnaires or participant demographic tables. See [DATA_SOURCES.md](DATA_SOURCES.md) for upstream acquisition instructions and [data/eeg/README.md](data/eeg/README.md) for all EEG inputs, settings, reference levels and verification commands. `python scripts/verify_eeg.py` verifies all four recordings without fitting; `python scripts/run_eeg_all.py --output new_eeg_all` optionally computes new HP-only fits.
-
-- Original repository code: **MIT**; see [LICENSE](LICENSE).
-- Data, derived examples, figures and documentation: **CC BY 4.0**; see [LICENSE-DATA](LICENSE-DATA) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Third-party dataset authors retain their attribution; this repository does not relicense their work as MIT.
-
-## Citation and credits
-
-Use `CITATION.cff` for this reproducibility package. The reproducibility archive DOI is **10.5281/zenodo.23457342** (version 1.0.1); the software DOI above identifies the algorithm software. See [docs/ZENODO.md](docs/ZENODO.md) for archive setup and metadata. Cite the original GSBS papers and the datasets when using them; BibTeX entries are provided in `references.bib`.
-
-**Yanzhe Zhao** — main contributor and maintainer; algorithm implementation, experiments, data preparation, figures and manuscript. **Yongzhang Ji** — contributed theoretical/methodological analysis and manuscript review. Paper contribution statements remain in the manuscript.
-
-Contact: justinzhaoyz@outlook.com
+**Yanzhe Zhao** — main contributor and maintainer; algorithm implementation, experiments, data preparation, figures and manuscript. **Yongzhang Ji** — theoretical/methodological analysis and manuscript review. Contact: justinzhaoyz@outlook.com.

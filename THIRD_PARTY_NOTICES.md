@@ -10,6 +10,8 @@ https://creativecommons.org/licenses/by/4.0/
 
 The original `Sherlock_AG_movie.npy` contains angular-gyrus data derived from the Sherlock study. This package averages the 16 subjects and selects the first 120 TRs (TR = 1.5 s), retaining all 4,230 voxels for fitting. Plots display selected voxels and computed statistics. The NPZ, search trace, derived statistics and rendered Figure 1 are adaptations; no movie footage is included. See `figure_sources/figure1/data/provenance.json` and `data_references.bib`.
 
+The complete Figure 6 application retains the first-half derivative's 946 TRs and all 4,230 voxels. It converts participant matrices to FP64, computes the group mean, fits the group and each of 16 participants, and derives selected boundaries, t-distance curves and cohort alignment statistics with a circular-shift null. The public collection includes all 17 compact segmentations, fit times, null scores and a 72-voxel display cache. Heatmap spatial standardization and voxel selection apply to display. These are adaptations under the same CC BY 4.0 license. Full source acquisition, byte identity, transformations and public rerun commands are recorded in `data/fmri/provenance.json` and `data/fmri/README.md`.
+
 Original study: Chen et al. (2017), *Shared memories reveal shared structure in neural activity across individuals*, Nature Neuroscience. https://doi.org/10.1038/nn.4450
 
 ## Four BBBD-derived EEG examples

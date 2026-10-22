@@ -42,3 +42,10 @@ for workload, group in hist.groupby('workload', sort=False):
     name = 'EEG' if workload == 'BBBD0' else workload
     rows.append(f"{name} & ${T}\\times{P}$ & {int(q.loc['reference', 'kmax'])} & {q.loc['reference', 'seconds']:.1f} & " + ' & '.join(vals) + r" \\")
 (O/'extended_rows.tex').write_text('\n'.join(rows)+'\n')
+
+# Complete cohort application table, separate from controlled timing comparisons.
+rows=[]
+for _, v in pd.read_csv(D/'fmri/fit_summary.csv').iterrows():
+    label='Group mean' if v.label=='group_mean' else f'Participant {int(v.label.split("_")[1])+1}'
+    rows.append(f'{label} & {v.selected_K} & {v.n_boundaries} & {v.elapsed_s:.4f}'+r' \\')
+write('fmri_fit_rows.tex',rows)

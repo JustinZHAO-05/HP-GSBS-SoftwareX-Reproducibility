@@ -4,7 +4,7 @@ License pages checked on **2026-10-19 (Asia/Shanghai)**; BBBD's [explicit licens
 
 | Material | Official source and permission | Public-package decision |
 |---|---|---|
-| Sherlock angular-gyrus fMRI | [Figshare dataset](https://figshare.com/articles/dataset/Sherlock_data_for_OHBM/12436955), explicitly CC BY 4.0 | Include the small averaged 120-TR derivative and its analysis trace, with attribution and transformations |
+| Sherlock angular-gyrus fMRI | [Figshare dataset](https://figshare.com/articles/dataset/Sherlock_data_for_OHBM/12436955), explicitly CC BY 4.0 | Include the 120-TR mechanism excerpt plus the complete 946-TR group/16-participant segmentation outputs, statistics and compact Figure 6 cache, with attribution and transformations |
 | BBBD EEG | [Official BBBD site, Usage Notes](https://bbbd.pythonanywhere.com/), explicitly CC BY 4.0 for downloadable files | Include the frozen analysis matrix, time map and four saved outputs required for Figure 3, with attribution and transformations |
 | Other three frozen EEG examples | BBBD Experiment 3; same CC BY 4.0 source | Include all three frozen matrices, time maps, historical CPU/GPU FP64 outputs and pipeline outputs in `data/eeg/`; retain aggregate comparisons in `data/eeg_consistency.csv` |
 | Synthetic signals and benchmark observations | Author-generated experiments | Include exact saved synthetic example, all supplied CSV summaries and paired timed observations, and deterministic input generator |
@@ -16,6 +16,14 @@ License pages checked on **2026-10-19 (Asia/Shanghai)**; BBBD's [explicit licens
 2. The supplied original-file MD5 is `f80dde9a451e140c39b98c2e5214d93c` and original shape is `(16, 946, 4230)`.
 3. Average across the subject axis, then retain the first 120 consecutive TRs and all voxels. No additional filtering was applied for Figure 1. The packaged analysis matrix is `figure_sources/figure1/data/Sherlock_AG_120TR.npz`, key `x`, shape `(120, 4230)`.
 4. The original input SHA-256 is recorded in `figure_sources/figure1/data/provenance.json`. `reproduce_analysis.py` reruns HP-GSBS and the installed reference against the supplied matrix. The figure renderer recomputes interval/correlation matrices directly from this input.
+
+### Complete Sherlock application
+
+The full-length application uses all 946 supplied TRs and all 4,230 angular-gyrus voxels for the group response and 16 participant matrices. The source file has 256,101,248 bytes, float32 dtype and MD5 `f80dde9a451e140c39b98c2e5214d93c`. Its fixed download URL is https://ndownloader.figshare.com/files/22927253.
+
+`data/fmri/` contains 17 compact saved segmentations, the configuration and measured fit times, state-count curves, selected boundaries, 120-pair observed alignment, 1,000 null scores and the display cache. Each participant matrix is converted to FP64; the group matrix accumulates each FP64 participant array divided by 16. Fitting retains the supplied source preprocessing. The Figure 6 heatmap selects 72 evenly spaced voxels and applies per-timepoint spatial z-scoring for display.
+
+From the repository root, `python scripts/download_sherlock.py --output external/Sherlock_AG_movie.npy` downloads and checks the input. `scripts/run_sherlock.py` performs a new HP-GSBS 0.2.0 group/participant analysis and recomputes alignment and the seeded null. [The application README](data/fmri/README.md), [provenance](data/fmri/provenance.json) and Online Resource 1, Section S8 give the complete commands and schema. `python scripts/verify_fmri.py` checks the archived results using the supplied arrays. Source data and derived materials retain CC BY 4.0 attribution.
 
 ## BBBD: obtain the upstream data
 

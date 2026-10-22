@@ -1,37 +1,49 @@
 {
-  "title": "HP-GSBS: SoftwareX reproducibility materials",
+  "title": "HP-GSBS: Reproducibility Materials for Neural-State Segmentation and Performance Evaluation",
   "upload_type": "software",
-  "description": "Reproducibility materials accompanying HP-GSBS: Accelerating greedy state boundary search with reusable interval statistics, by Yanzhe Zhao and Yongzhang Ji. Includes five figure sources, benchmark observations, synthetic inputs, CC BY 4.0 Sherlock/BBBD-derived analysis examples and portable rerun scripts for HP-GSBS 0.2.0. Original code: MIT; data, figures and documentation: CC BY 4.0. See LICENSE-DATA, DATA_SOURCES.md and THIRD_PARTY_NOTICES.md for attribution, transformations and per-material licensing. Independent archive from the HP-GSBS algorithm software.",
+  "description": "Independent reproducibility materials for HP-GSBS: Accelerating greedy state boundary search with reusable interval statistics, by Yanzhe Zhao and Yongzhang Ji. Version 1.1.0 supplies six figure sources and previews, all controlled benchmark observations and tables, four frozen BBBD EEG analysis inputs with time maps and saved FP64 outputs, and a complete Sherlock angular-gyrus fMRI application for the group response and 16 participants. Includes 17 segmentations, state-count curves, boundary-alignment and circular-shift statistics, source provenance, public acquisition/rerun scripts, and the current author manuscript with Online Resource 1. Algorithm software remains independently versioned as HP-GSBS 0.2.0. Original code is MIT; source data and applicable derived materials retain CC BY 4.0 attribution; see LICENSE, LICENSE-DATA, DATA_SOURCES.md and THIRD_PARTY_NOTICES.md.",
   "creators": [
     {
       "name": "Zhao, Yanzhe",
-      "affiliation": "Tianjin University"
+      "affiliation": "School of Future Technology, Tianjin University"
     },
     {
       "name": "Ji, Yongzhang",
-      "affiliation": "Southwest University"
+      "affiliation": "Faculty of Psychology, Southwest University"
     }
   ],
-  "version": "1.0.1",
-  "publication_date": "2026-10-19",
+  "version": "1.1.0",
+  "publication_date": "2026-10-22",
   "license": "cc-by-4.0",
   "access_right": "open",
   "keywords": [
     "GSBS",
-    "neuroscience",
+    "neural state segmentation",
+    "neuroinformatics",
     "reproducibility",
     "EEG",
+    "fMRI",
     "scientific software"
   ],
   "related_identifiers": [
     {
-      "identifier": "https://github.com/JustinZHAO-05/HP-GSBS-SoftwareX-Reproducibility/tree/v1.0.1",
+      "identifier": "https://github.com/JustinZHAO-05/HP-GSBS-SoftwareX-Reproducibility/tree/v1.1.0",
       "relation": "isIdenticalTo",
       "scheme": "url"
     },
     {
+      "identifier": "10.5281/zenodo.23457342",
+      "relation": "isNewVersionOf",
+      "scheme": "doi"
+    },
+    {
       "identifier": "10.5281/zenodo.23422148",
       "relation": "requires",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.48550/arXiv.2610.25898",
+      "relation": "isSupplementTo",
       "scheme": "doi"
     },
     {

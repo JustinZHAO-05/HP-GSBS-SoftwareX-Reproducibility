@@ -1,0 +1,25 @@
+{
+  "version": "1.1.0",
+  "software_version": "0.2.0",
+  "software_commit": "b86b409169aa173d4a361d8cbcc633add1bfacf6",
+  "software_doi": "10.5281/zenodo.23422148",
+  "previous_reproducibility_version": "1.0.1",
+  "previous_version_doi": "10.5281/zenodo.23457342",
+  "eeg_snapshot": "f90797909882a067578f7a50c6814de46d333d98",
+  "contents": {
+    "figures": 6,
+    "eeg_recordings": 4,
+    "fmri_segmentations": 17,
+    "controlled_timed_observations": 140
+  },
+  "notes": [
+    "Historical numerical observations and benchmark input identities retained.",
+    "Sherlock application follows the versioned Figshare source and recorded CPU configuration.",
+    "The compact fMRI schema contains five fields; configuration and timings are recorded separately in JSON.",
+    "Current manuscript and Online Resource 1 are author manuscripts prepared for Neuroinformatics."
+  ],
+  "licenses": {
+    "original_code": "MIT",
+    "datasets_and_applicable_derivatives": "CC-BY-4.0"
+  }
+}
