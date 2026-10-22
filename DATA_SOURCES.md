@@ -1,12 +1,12 @@
 # Data sources, public access and reuse
 
-License pages checked on **2026-10-19 (Asia/Shanghai)**. Decisions below use the official dataset pages, rather than inferring redistribution rights from public download access.
+License pages checked on **2026-10-19 (Asia/Shanghai)**; BBBD's [explicit license statement](https://bbbd.pythonanywhere.com/about-page) rechecked **2026-10-22** for the four-record EEG addition. Decisions below use the official dataset pages, rather than inferring redistribution rights from public download access.
 
 | Material | Official source and permission | Public-package decision |
 |---|---|---|
 | Sherlock angular-gyrus fMRI | [Figshare dataset](https://figshare.com/articles/dataset/Sherlock_data_for_OHBM/12436955), explicitly CC BY 4.0 | Include the small averaged 120-TR derivative and its analysis trace, with attribution and transformations |
 | BBBD EEG | [Official BBBD site, Usage Notes](https://bbbd.pythonanywhere.com/), explicitly CC BY 4.0 for downloadable files | Include the frozen analysis matrix, time map and four saved outputs required for Figure 3, with attribution and transformations |
-| Other three frozen EEG examples | Same BBBD source | Include aggregate comparisons in `data/eeg_consistency.csv`; individual inputs are not packaged |
+| Other three frozen EEG examples | BBBD Experiment 3; same CC BY 4.0 source | Include all three frozen matrices, time maps, historical CPU/GPU FP64 outputs and pipeline outputs in `data/eeg/`; retain aggregate comparisons in `data/eeg_consistency.csv` |
 | Synthetic signals and benchmark observations | Author-generated experiments | Include exact saved synthetic example, all supplied CSV summaries and paired timed observations, and deterministic input generator |
 | Stimulus video, full physiological collections, questionnaires and demographic data | Separate source materials, not needed for these figures | Not redistributed; use the upstream dataset site to obtain needed material under its applicable terms |
 
@@ -31,7 +31,13 @@ The shared `figure_sources/figure3/data/` contains:
 
 Each matrix has 1,336 samples and 64 channels; sampling rate is 5.12 Hz and the full record is approximately 260.94 s. The stored inputs use block-mean reduction and z-scoring and were converted to FP64 for fits. The reproduction package applies no additional filtering, artifact processing or source reconstruction. Original channel names, algorithm settings and source identifiers remain in the NPZ metadata. `scripts/verify_eeg.py` checks the saved agreement; `scripts/run_eeg_example.py` makes a new CPU fit.
 
-`source_provenance.json` retains original immutable commit/blob identifiers. These identify the source archive; no private repository is needed to use the packaged data. The data filenames retain anonymized public study-style IDs, without demographic or clinical tables.
+### All four EEG recordings
+
+[data/eeg/README.md](data/eeg/README.md) and [provenance.json](data/eeg/provenance.json) identify all four public inputs and every saved output. Recording 1 reuses the files listed above. Recordings 2–4 add the Experiment 3 inputs `sub-02_ses-01_stim02` (1857 × 32 frontal), `sub-03_ses-02_stim03` (1754 × 64), and `sub-04_ses-02_stim06` (1374 × 64), their 5.12-Hz time maps and full FP64 outputs. Their historical metadata identifies the additional pipeline outputs as CPU outputs, rather than complete official reference fits.
+
+The recorded preprocessing includes event cropping, explicit artifact masks, 25-sample block means from 128 Hz to 5.12 Hz, and channel z-scoring with valid-bin sample SD. The exact upstream download version is not independently established; [the current v1.1 access page](https://zenodo.org/records/22968459) does not establish how the frozen local arrays were created. Exact reproduction begins with the included processed matrices. The original raw files, artifact masks and full preprocessing project are separate upstream/local materials.
+
+`data/eeg/provenance.json` retains immutable source commit/blob identifiers, file hashes and value hashes, together with original pipeline identifiers. These identify different byte domains and are not treated as interchangeable. No private repository is needed to use the packaged data. The filenames retain anonymized study-style IDs, without demographic or clinical tables. Run `python scripts/verify_eeg.py` for independent offline checks and consult `data/eeg/README.md` for optional HP-GSBS 0.2.0 reruns.
 
 ## Reuse conditions
 

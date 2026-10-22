@@ -1,0 +1,205 @@
+{
+  "passed": true,
+  "scope": "Four frozen processed EEG inputs and historical saved FP64 outputs",
+  "file_hashes_checked": 23,
+  "gsbs_fits_executed": 0,
+  "atol": 1e-08,
+  "rtol": 1e-08,
+  "records": [
+    {
+      "fixture_id": 0,
+      "recording_id": "sub-01_ses-01_stim01",
+      "shape": [
+        1336,
+        64
+      ],
+      "selected_K": 126,
+      "input_and_time_hashes_passed": true,
+      "historical_pipeline_passed": true,
+      "backends": {
+        "cpu-fast": {
+          "passed": true,
+          "reference_type": "Historical unmodified official complete output",
+          "max_abs_errors": {
+            "tdists": 2.433608869978343e-13,
+            "state_patterns": 0.0,
+            "strengths": 0.0
+          },
+          "boundary_histories_exact": true,
+          "selected_K": 126
+        },
+        "torch-cuda": {
+          "passed": true,
+          "reference_type": "Historical unmodified official complete output",
+          "max_abs_errors": {
+            "tdists": 9.592326932761353e-14,
+            "state_patterns": 0.0,
+            "strengths": 2.220446049250313e-16
+          },
+          "boundary_histories_exact": true,
+          "selected_K": 126
+        },
+        "triton-cuda": {
+          "passed": true,
+          "reference_type": "Historical unmodified official complete output",
+          "max_abs_errors": {
+            "tdists": 9.592326932761353e-14,
+            "state_patterns": 0.0,
+            "strengths": 2.220446049250313e-16
+          },
+          "boundary_histories_exact": true,
+          "selected_K": 126
+        },
+        "official": {
+          "passed": true,
+          "reference_type": "Historical unmodified official complete output",
+          "max_abs_errors": {
+            "tdists": 0.0,
+            "state_patterns": 0.0,
+            "strengths": 0.0
+          },
+          "boundary_histories_exact": true,
+          "selected_K": 126
+        }
+      }
+    },
+    {
+      "fixture_id": 1,
+      "recording_id": "sub-02_ses-01_stim02",
+      "shape": [
+        1857,
+        32
+      ],
+      "selected_K": 120,
+      "input_and_time_hashes_passed": true,
+      "historical_pipeline_passed": true,
+      "backends": {
+        "cpu-fast": {
+          "passed": true,
+          "reference_type": "Historical official-validated CPU reference chain",
+          "max_abs_errors": {
+            "tdists": 0.0,
+            "state_patterns": 0.0,
+            "strengths": 0.0
+          },
+          "boundary_histories_exact": true,
+          "selected_K": 120
+        },
+        "torch-cuda": {
+          "passed": true,
+          "reference_type": "Historical official-validated CPU reference chain",
+          "max_abs_errors": {
+            "tdists": 3.126388037344441e-13,
+            "state_patterns": 0.0,
+            "strengths": 2.220446049250313e-16
+          },
+          "boundary_histories_exact": true,
+          "selected_K": 120
+        },
+        "triton-cuda": {
+          "passed": true,
+          "reference_type": "Historical official-validated CPU reference chain",
+          "max_abs_errors": {
+            "tdists": 3.126388037344441e-13,
+            "state_patterns": 0.0,
+            "strengths": 2.220446049250313e-16
+          },
+          "boundary_histories_exact": true,
+          "selected_K": 120
+        }
+      }
+    },
+    {
+      "fixture_id": 2,
+      "recording_id": "sub-03_ses-02_stim03",
+      "shape": [
+        1754,
+        64
+      ],
+      "selected_K": 173,
+      "input_and_time_hashes_passed": true,
+      "historical_pipeline_passed": true,
+      "backends": {
+        "cpu-fast": {
+          "passed": true,
+          "reference_type": "Historical official-validated CPU reference chain",
+          "max_abs_errors": {
+            "tdists": 0.0,
+            "state_patterns": 0.0,
+            "strengths": 0.0
+          },
+          "boundary_histories_exact": true,
+          "selected_K": 173
+        },
+        "torch-cuda": {
+          "passed": true,
+          "reference_type": "Historical official-validated CPU reference chain",
+          "max_abs_errors": {
+            "tdists": 2.7711166694643907e-13,
+            "state_patterns": 0.0,
+            "strengths": 4.440892098500626e-16
+          },
+          "boundary_histories_exact": true,
+          "selected_K": 173
+        },
+        "triton-cuda": {
+          "passed": true,
+          "reference_type": "Historical official-validated CPU reference chain",
+          "max_abs_errors": {
+            "tdists": 2.7711166694643907e-13,
+            "state_patterns": 0.0,
+            "strengths": 4.440892098500626e-16
+          },
+          "boundary_histories_exact": true,
+          "selected_K": 173
+        }
+      }
+    },
+    {
+      "fixture_id": 3,
+      "recording_id": "sub-04_ses-02_stim06",
+      "shape": [
+        1374,
+        64
+      ],
+      "selected_K": 131,
+      "input_and_time_hashes_passed": true,
+      "historical_pipeline_passed": true,
+      "backends": {
+        "cpu-fast": {
+          "passed": true,
+          "reference_type": "Historical official-validated CPU reference chain",
+          "max_abs_errors": {
+            "tdists": 0.0,
+            "state_patterns": 0.0,
+            "strengths": 0.0
+          },
+          "boundary_histories_exact": true,
+          "selected_K": 131
+        },
+        "torch-cuda": {
+          "passed": true,
+          "reference_type": "Historical official-validated CPU reference chain",
+          "max_abs_errors": {
+            "tdists": 1.8474111129762605e-13,
+            "state_patterns": 0.0,
+            "strengths": 2.220446049250313e-16
+          },
+          "boundary_histories_exact": true,
+          "selected_K": 131
+        },
+        "triton-cuda": {
+          "passed": true,
+          "reference_type": "Historical official-validated CPU reference chain",
+          "max_abs_errors": {
+            "tdists": 1.8474111129762605e-13,
+            "state_patterns": 0.0,
+            "strengths": 2.220446049250313e-16
+          },
+          "boundary_histories_exact": true,
+          "selected_K": 131
+        }
+      }
+    }
+  ]
+}

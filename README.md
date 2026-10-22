@@ -1,8 +1,8 @@
-# HP-GSBS: SoftwareX reproducibility materials
+# HP-GSBS: Reproducibility materials
 
 Data and scripts accompanying **“HP-GSBS: Accelerating greedy state boundary search with reusable interval statistics”**, by Yanzhe Zhao and Yongzhang Ji.
 
-This repository reconstructs the five paper figures and supplementary tables from archived observations, and supplies portable scripts for new experiments. The algorithm itself is maintained in [HP-GSBS](https://github.com/JustinZHAO-05/HP-GSBS), fixed here to **0.2.0**, [software DOI: 10.5281/zenodo.23422148](https://doi.org/10.5281/zenodo.23422148). This reproducibility repository has its own version series; the Zenodo integration release is **v1.0.1**.
+This repository reconstructs the five paper figures and supplementary tables from archived observations, and supplies portable scripts for new experiments. The algorithm itself is maintained in [HP-GSBS](https://github.com/JustinZHAO-05/HP-GSBS), fixed here to **0.2.0**, [software DOI: 10.5281/zenodo.23422148](https://doi.org/10.5281/zenodo.23422148). This reproducibility repository has its own version series; the last Zenodo integration release is **v1.0.1**. The current Git branch additionally includes all four frozen EEG inputs and saved FP64 results in [data/eeg](data/eeg/README.md). Those additions are not part of the older v1.0.1 DOI; use the exact Git commit until a new version is archived.
 
 **Reproducibility archive, version 1.0.1:** [10.5281/zenodo.23457342](https://doi.org/10.5281/zenodo.23457342).
 
@@ -57,7 +57,7 @@ python scripts/run_consistency_example.py --output new_all_route_consistency --b
 
 ## Data access and licensing
 
-**Both source datasets explicitly permit reuse under CC BY 4.0.** The small derived inputs needed for Figures 1 and 3 are included with attribution, transformations and source links. The package does not contain stimulus videos, the complete original datasets, questionnaires or participant demographic tables. See [DATA_SOURCES.md](DATA_SOURCES.md) for the license checks, upstream acquisition instructions and exact shared files. The other three EEG records are represented by aggregate comparison results.
+**Both source datasets explicitly permit reuse under CC BY 4.0.** The derived inputs needed for Figures 1 and 3 and **all four EEG comparison recordings** are included with attribution, transformations and source links. The package does not contain stimulus videos, the complete original datasets, questionnaires or participant demographic tables. See [DATA_SOURCES.md](DATA_SOURCES.md) for upstream acquisition instructions and [data/eeg/README.md](data/eeg/README.md) for all EEG inputs, settings, reference levels and verification commands. `python scripts/verify_eeg.py` verifies all four recordings without fitting; `python scripts/run_eeg_all.py --output new_eeg_all` optionally computes new HP-only fits.
 
 - Original repository code: **MIT**; see [LICENSE](LICENSE).
 - Data, derived examples, figures and documentation: **CC BY 4.0**; see [LICENSE-DATA](LICENSE-DATA) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Third-party dataset authors retain their attribution; this repository does not relicense their work as MIT.

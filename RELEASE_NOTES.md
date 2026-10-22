@@ -1,3 +1,11 @@
+# Unreleased — Four-record EEG reproducibility addition (2026-10-22)
+
+- Added the remaining three frozen BBBD Experiment 3 inputs and time maps, complete historical FP64 CPU/PyTorch CUDA/Triton outputs and pipeline outputs. Recording 1 reuses the existing Figure 3 files.
+- Added per-record provenance, immutable source identities, distinct file/value/pipeline hashes, parameters, historical validation receipts and offline verification of all four records at atol=rtol=1e-8.
+- Added an optional HP-GSBS 0.2.0 rerun script for any or all four inputs, with separate output directories. No official or HP fits were executed to prepare this addition.
+- Updated source attribution, processing and public data scope. Complete official reference output remains available for Recording 1; Recordings 2–4 retain the historically validated CPU reference chain.
+- Original software release, reproducibility tags and Zenodo v1.0.1 remain unchanged. This working-tree addition is not included in the v1.0.1 DOI and has not yet received a new version DOI.
+
 # v1.0.1 — Zenodo integration release
 
 Updates citation and archive metadata to version 1.0.1 and points the archive identity to the v1.0.1 tag. Published after enabling the repository in Zenodo, so its GitHub release can be archived automatically with an independent DOI. Scientific input arrays, recorded observations and reproduction scripts are unchanged from v1.0.0. The existing validation receipt remains applicable.

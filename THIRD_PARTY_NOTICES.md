@@ -12,7 +12,7 @@ The original `Sherlock_AG_movie.npy` contains angular-gyrus data derived from th
 
 Original study: Chen et al. (2017), *Shared memories reveal shared structure in neural activity across individuals*, Nature Neuroscience. https://doi.org/10.1038/nn.4450
 
-## BBBD-derived EEG example
+## Four BBBD-derived EEG examples
 
 Jens Madsen, Nikhil Kuppa and Lucas C. Parra, *The Brain, Body, and Behavior Dataset (BBBD): Multimodal Recordings during Educational Videos*.
 Data: https://doi.org/10.15387/fcp_indi.retro.bbbd
@@ -22,7 +22,7 @@ Official site: https://bbbd.pythonanywhere.com/
 The official site states that its downloadable files are **CC BY 4.0**.
 https://creativecommons.org/licenses/by/4.0/
 
-Figure 3 data are study-derived, frozen 64-channel EEG at 5.12 Hz, represented by block means and z-scoring and converted to FP64 for fitting. The saved fit arrays, segmentation, t-distance curves and Figure 3 are derived materials. The original data acquisition, collection and source-dataset credit remain with the dataset authors. Only one frozen analysis example is redistributed here; no participant questionnaires, demographics or stimulus videos are included.
+The four study-derived EEG inputs are frozen 32- or 64-channel matrices at 5.12 Hz. The recorded local processing includes event cropping, explicit artifact masks, 25-sample block means from 128 Hz, channel z-scoring using valid-bin sample SD, and one frontal-channel view; values are converted to FP64 for fits. Figure 3 uses the first recording. All four inputs, time maps and corresponding saved FP64 outputs are publicly supplied; their segmentation, t-distance curves and rendered figures are derived materials. The original data acquisition, collection and source-dataset credit remain with the dataset authors. No participant questionnaires, demographics or stimulus videos are included. See `data/eeg/provenance.json` for each source and modification, and `data/eeg/README.md` for download-version and reference-chain information. The [official CC BY 4.0 statement](https://bbbd.pythonanywhere.com/about-page) was rechecked on 2026-10-22.
 
 ## Reference software and method
 

@@ -1,0 +1,1172 @@
+{
+  "schema_version": 1,
+  "prepared_on": "2026-10-22",
+  "timezone": "Asia/Shanghai",
+  "dataset": {
+    "name": "The Brain, Body, and Behavior Dataset (BBBD): Multimodal Recordings during Educational Videos",
+    "creators": [
+      "Jens Madsen",
+      "Nikhil Kuppa",
+      "Lucas C. Parra"
+    ],
+    "website": "https://bbbd.pythonanywhere.com/",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_statement": "https://bbbd.pythonanywhere.com/about-page",
+    "license_checked_on": "2026-10-22",
+    "data_paper_doi": "10.1038/s41597-026-07215-1",
+    "experiments_1_3_paper_doi": "10.1073/pnas.2016980118",
+    "historical_dataset_doi": "10.5281/zenodo.19241964",
+    "current_access_reference": "https://zenodo.org/records/22968459",
+    "exact_upstream_download_version": "Not independently established for the frozen matrices"
+  },
+  "preprocessing": {
+    "recorded_steps": [
+      "Event-based cropping",
+      "Explicit artifact masks",
+      "25-sample nonoverlapping block means: 128 Hz to 5.12 Hz",
+      "Within-recording channel z-scoring using valid-bin sample SD",
+      "32 frontal channels for fixture 1; all 64 channels for the other fixtures",
+      "Stored float32 values converted to float64 for fitting"
+    ],
+    "additional_processing_in_this_package": "None",
+    "scope": "Frozen processed-input reproduction; upstream artifact masks and full raw preprocessing project are not included"
+  },
+  "hash_definitions": {
+    "file": "SHA-256 of all file bytes, including container/header",
+    "array": "SHA-256 of C-order little-endian value bytes at the stated dtype",
+    "historical": "Copied pipeline identifier for the 64-channel base; its original byte-domain is not inferred, especially for the frontal view",
+    "raw": "Raw acquisition hash unavailable; processed-input hashes are not raw-data hashes"
+  },
+  "records": [
+    {
+      "fixture_id": 0,
+      "recording_number": 1,
+      "recording_id": "sub-01_ses-01_stim01",
+      "experiment": null,
+      "experiment_evidence": "Not recorded in frozen source metadata",
+      "subject_id": "01",
+      "session_id": "01",
+      "stimulus_id": "stim01",
+      "session_condition": null,
+      "view": "all64",
+      "shape": [
+        1336,
+        64
+      ],
+      "sampling_frequency_hz": 5.12,
+      "input_duration_s": 260.9375,
+      "bin_center_start_s": 0.09765625,
+      "bin_center_end_s": 260.83984375,
+      "selected_K": 126,
+      "channel_names": [
+        "Fp1",
+        "AF7",
+        "AF3",
+        "F1",
+        "F3",
+        "F5",
+        "F7",
+        "FT7",
+        "FC5",
+        "FC3",
+        "FC1",
+        "C1",
+        "C3",
+        "C5",
+        "T7",
+        "TP7",
+        "CP5",
+        "CP3",
+        "CP1",
+        "P1",
+        "P3",
+        "P5",
+        "P7",
+        "P9",
+        "PO7",
+        "PO3",
+        "O1",
+        "Iz",
+        "Oz",
+        "POz",
+        "Pz",
+        "CPz",
+        "Fpz",
+        "Fp2",
+        "AF8",
+        "AF4",
+        "Afz",
+        "Fz",
+        "F2",
+        "F4",
+        "F6",
+        "F8",
+        "FT8",
+        "FC6",
+        "FC4",
+        "FC2",
+        "FCz",
+        "Cz",
+        "C2",
+        "C4",
+        "C6",
+        "T8",
+        "TP8",
+        "CP6",
+        "CP4",
+        "CP2",
+        "P2",
+        "P4",
+        "P6",
+        "P8",
+        "P10",
+        "PO8",
+        "PO4",
+        "O2"
+      ],
+      "channel_mapping_note": "64-channel order recorded in the frozen manifest",
+      "input": "figure_sources/figure3/data/sub-01_ses-01_stim01__all64__5.12hz__d5__k131.npz",
+      "input_keys": {
+        "x": "x",
+        "times": "times"
+      },
+      "input_stored_dtype": "float64",
+      "fixture_dtype": "float32",
+      "fit_dtype": "float64",
+      "hashes": {
+        "fixture_npy_file_sha256": "1269c879383c5457d26d16f2afa5a2398b0f962383fb92a3bf8963f51a2c9389",
+        "times_npy_file_sha256": "1fc407d5af56ef53ab767fb7a099bf767bb9117b7f5d2e445a4a9c45b2e155e6",
+        "fixture_array_float32_C_sha256": "e5d51f9788632ef3affc511cc16faf5442c76d63b129fb022e38fd47deb38d81",
+        "fit_array_float64_C_sha256": "122359ec74b5546d3a577a639b61c65a0572e3d2ef70a8b6fa612b7cb5af24b1",
+        "times_array_float64_C_sha256": "60496ed3f2db6a2abde0b5925c97ba404b8a5c0ce91138d8ec526b6cd3e03160",
+        "historical_base_matrix_input_hash": "1269c879383c5457d26d16f2afa5a2398b0f962383fb92a3bf8963f51a2c9389",
+        "raw_acquisition_sha256": null
+      },
+      "source_identifiers": {
+        "fit_id": "sub-01_ses-01_stim01__all64__5.12hz__d5__k131",
+        "spec_id": "fac9beff60858145",
+        "config_id": "d359ff6ebc2e7278"
+      },
+      "source_representation": "broadband_all64_5p12_blockmean_zscore_v1",
+      "historical_preprocessing_config_hash": "aa81dbc66e9ce43cffd3bac2dbaa5275aa3773ecb2ec0e2e16e0045fc033f8c8",
+      "historical_qc": {
+        "valid_fraction": 0.9483532934131736,
+        "longest_zero_flat_run_s": 0.0,
+        "formal_inclusion_status": "eligible"
+      },
+      "gsbs_parameters": {
+        "kmax": 131,
+        "dmin": 5,
+        "statewise_detection": true,
+        "finetune": 1,
+        "finetune_order": true,
+        "blocksize": 50
+      },
+      "rerun_target_software": {
+        "hpgsbs": "0.2.0",
+        "statesegmentation": "0.0.6"
+      },
+      "validated_release_compute_config": {
+        "kmax": 131,
+        "statewise_detection": true,
+        "finetune": 1,
+        "finetune_order": true,
+        "blocksize": 50,
+        "dmin": 5,
+        "dtype": "float64",
+        "q_strategy": "full",
+        "tile_size": 128,
+        "n_jobs": 1,
+        "blas_threads": 1,
+        "numba_threads": 1,
+        "memory_fraction": 0.55,
+        "trace": true,
+        "mode": "latency",
+        "tie_tolerance": 1e-11,
+        "candidate_backend": "streaming",
+        "candidate_chunk_size": 256,
+        "td_backend": "prefix2d",
+        "max_candidates": 50000000,
+        "max_fallback_elements": 50000000,
+        "max_workspace_bytes": 2147483648,
+        "max_pair_evaluations": 50000000,
+        "resident_min_candidates": 20000
+      },
+      "archived_output_note": "Historical saved outputs; exact HP distribution version is not asserted from unversioned NPZ metadata. v0.2.0 validation is documented separately in validation_history.json.",
+      "outputs": {
+        "cpu-fast": "figure_sources/figure3/data/0_full_cpu.npz",
+        "torch-cuda": "figure_sources/figure3/data/0_torch-cuda_float64.npz",
+        "triton-cuda": "figure_sources/figure3/data/0_triton-cuda_float64.npz",
+        "official": "figure_sources/figure3/data/0_full_reference.npz"
+      },
+      "historical_pipeline_output": "figure_sources/figure3/data/sub-01_ses-01_stim01__all64__5.12hz__d5__k131.npz",
+      "comparison_reference": "figure_sources/figure3/data/0_full_reference.npz",
+      "comparison_reference_type": "Historical unmodified official complete output",
+      "historical_validation": [
+        {
+          "backend": "cpu-fast",
+          "source": "official-full",
+          "input_sha256": "122359ec74b5546d3a577a639b61c65a0572e3d2ef70a8b6fa612b7cb5af24b1",
+          "report": {
+            "bounds_equal": true,
+            "nstates_equal": true,
+            "first_divergence": null,
+            "tdists_close": true,
+            "max_t_error": 2.433608869978343e-13,
+            "patterns_close": true,
+            "strengths_close": true,
+            "validation_level": "full-search-trace",
+            "trace_compared": true,
+            "moves_compared": false,
+            "trace_skipped_reason": null,
+            "moves_skipped_reason": "per-move fields unavailable or not requested",
+            "required_evidence_present": true,
+            "trace_values_close": true,
+            "first_numerical_divergence": null,
+            "passed": true
+          }
+        },
+        {
+          "backend": "torch-cuda",
+          "source": "official-full",
+          "input_sha256": "122359ec74b5546d3a577a639b61c65a0572e3d2ef70a8b6fa612b7cb5af24b1",
+          "report": {
+            "bounds_equal": true,
+            "nstates_equal": true,
+            "first_divergence": null,
+            "tdists_close": true,
+            "max_t_error": 9.592326932761353e-14,
+            "patterns_close": true,
+            "strengths_close": true,
+            "validation_level": "full-search-trace",
+            "trace_compared": true,
+            "moves_compared": false,
+            "trace_skipped_reason": null,
+            "moves_skipped_reason": "per-move fields unavailable or not requested",
+            "required_evidence_present": true,
+            "trace_values_close": true,
+            "first_numerical_divergence": null,
+            "passed": true
+          }
+        },
+        {
+          "backend": "triton-cuda",
+          "source": "official-full",
+          "input_sha256": "122359ec74b5546d3a577a639b61c65a0572e3d2ef70a8b6fa612b7cb5af24b1",
+          "report": {
+            "bounds_equal": true,
+            "nstates_equal": true,
+            "first_divergence": null,
+            "tdists_close": true,
+            "max_t_error": 9.592326932761353e-14,
+            "patterns_close": true,
+            "strengths_close": true,
+            "validation_level": "full-search-trace",
+            "trace_compared": true,
+            "moves_compared": false,
+            "trace_skipped_reason": null,
+            "moves_skipped_reason": "per-move fields unavailable or not requested",
+            "required_evidence_present": true,
+            "trace_values_close": true,
+            "first_numerical_divergence": null,
+            "passed": true
+          }
+        }
+      ]
+    },
+    {
+      "fixture_id": 1,
+      "recording_number": 2,
+      "recording_id": "sub-02_ses-01_stim02",
+      "experiment": 3,
+      "experiment_evidence": "Historical ADDITIONAL_EEG_PROVENANCE.md",
+      "subject_id": "02",
+      "session_id": "01",
+      "stimulus_id": "stim02",
+      "session_condition": "Attentive intentional learning",
+      "view": "frontal",
+      "shape": [
+        1857,
+        32
+      ],
+      "sampling_frequency_hz": 5.12,
+      "input_duration_s": 362.6953125,
+      "bin_center_start_s": 0.09765625,
+      "bin_center_end_s": 362.59765625,
+      "selected_K": 120,
+      "channel_names": null,
+      "channel_mapping_note": "32 frontal features in frozen column order; exact indices into the 64-channel base were not retained in the supplied manifest",
+      "input": "data/eeg/inputs/recording_1.npz",
+      "input_keys": {
+        "x": "x",
+        "times": "times"
+      },
+      "input_stored_dtype": "float32",
+      "fixture_dtype": "float32",
+      "fit_dtype": "float64",
+      "hashes": {
+        "fixture_npy_file_sha256": "ebb6b6d16efc0ae151df436f7a16b11fa8b2146b4c0470388629748d4a58073b",
+        "times_npy_file_sha256": "b4edbf66589bd342157199d7d23d9a844b8a8d627d34a2887c9514c2e206a4c0",
+        "fixture_array_float32_C_sha256": "fb197b207c6a685981f31b625bbd4af6c08e35e8e64e17a1f7aef83ced94a143",
+        "fit_array_float64_C_sha256": "5ba1bf1a2bf2d6ffccfc26d8c9f52ba0a3286940fa19bfa1e200db1f133229ef",
+        "times_array_float64_C_sha256": "039b8953c1d6a036ab65264406d1b963ef7d772bba75af3743d577264a027a25",
+        "historical_base_matrix_input_hash": "d3e17eb5ac368b1f98094cd635652842afb4056645da9738109716fce45722d6",
+        "raw_acquisition_sha256": null
+      },
+      "source_identifiers": {
+        "fit_id": "sub-02_ses-01_stim02__frontal__5.12hz__d5__k121",
+        "spec_id": "7732c41b662cc856",
+        "config_id": "d359ff6ebc2e7278"
+      },
+      "source_representation": "broadband_all64_5p12_blockmean_zscore_v1",
+      "historical_preprocessing_config_hash": "aa81dbc66e9ce43cffd3bac2dbaa5275aa3773ecb2ec0e2e16e0045fc033f8c8",
+      "historical_qc": {
+        "valid_fraction": 0.8653742595584276,
+        "longest_zero_flat_run_s": 1.171875,
+        "formal_inclusion_status": "eligible"
+      },
+      "gsbs_parameters": {
+        "kmax": 121,
+        "dmin": 5,
+        "statewise_detection": true,
+        "finetune": 1,
+        "finetune_order": true,
+        "blocksize": 50
+      },
+      "rerun_target_software": {
+        "hpgsbs": "0.2.0",
+        "statesegmentation": "0.0.6"
+      },
+      "validated_release_compute_config": {
+        "kmax": 121,
+        "statewise_detection": true,
+        "finetune": 1,
+        "finetune_order": true,
+        "blocksize": 50,
+        "dmin": 5,
+        "dtype": "float64",
+        "q_strategy": "full",
+        "tile_size": 128,
+        "n_jobs": 1,
+        "blas_threads": 1,
+        "numba_threads": 1,
+        "memory_fraction": 0.55,
+        "trace": true,
+        "mode": "latency",
+        "tie_tolerance": 1e-11,
+        "candidate_backend": "streaming",
+        "candidate_chunk_size": 256,
+        "td_backend": "prefix2d",
+        "max_candidates": 50000000,
+        "max_fallback_elements": 50000000,
+        "max_workspace_bytes": 2147483648,
+        "max_pair_evaluations": 50000000,
+        "resident_min_candidates": 20000
+      },
+      "archived_output_note": "Historical saved outputs; exact HP distribution version is not asserted from unversioned NPZ metadata. v0.2.0 validation is documented separately in validation_history.json.",
+      "outputs": {
+        "cpu-fast": "data/eeg/outputs/recording_1_full_cpu.npz",
+        "torch-cuda": "data/eeg/outputs/recording_1_torch-cuda_float64.npz",
+        "triton-cuda": "data/eeg/outputs/recording_1_triton-cuda_float64.npz"
+      },
+      "historical_pipeline_output": "data/eeg/outputs/recording_1_historical_pipeline_cpu.npz",
+      "comparison_reference": "data/eeg/outputs/recording_1_full_cpu.npz",
+      "comparison_reference_type": "Historical official-validated CPU reference chain",
+      "historical_validation": [
+        {
+          "backend": "cpu-fast",
+          "source": "v0.1-full-validated-against-official-history",
+          "input_sha256": "5ba1bf1a2bf2d6ffccfc26d8c9f52ba0a3286940fa19bfa1e200db1f133229ef",
+          "report": {
+            "bounds_equal": true,
+            "nstates_equal": true,
+            "first_divergence": null,
+            "tdists_close": true,
+            "max_t_error": 0.0,
+            "patterns_close": true,
+            "strengths_close": true,
+            "validation_level": "full-search-trace",
+            "trace_compared": true,
+            "moves_compared": false,
+            "trace_skipped_reason": null,
+            "moves_skipped_reason": "per-move fields unavailable or not requested",
+            "required_evidence_present": true,
+            "trace_values_close": true,
+            "first_numerical_divergence": null,
+            "passed": true
+          }
+        },
+        {
+          "backend": "torch-cuda",
+          "source": "v0.1-full-validated-against-official-history",
+          "input_sha256": "5ba1bf1a2bf2d6ffccfc26d8c9f52ba0a3286940fa19bfa1e200db1f133229ef",
+          "report": {
+            "bounds_equal": true,
+            "nstates_equal": true,
+            "first_divergence": null,
+            "tdists_close": true,
+            "max_t_error": 3.126388037344441e-13,
+            "patterns_close": true,
+            "strengths_close": true,
+            "validation_level": "full-search-trace",
+            "trace_compared": true,
+            "moves_compared": false,
+            "trace_skipped_reason": null,
+            "moves_skipped_reason": "per-move fields unavailable or not requested",
+            "required_evidence_present": true,
+            "trace_values_close": true,
+            "first_numerical_divergence": null,
+            "passed": true
+          }
+        },
+        {
+          "backend": "triton-cuda",
+          "source": "v0.1-full-validated-against-official-history",
+          "input_sha256": "5ba1bf1a2bf2d6ffccfc26d8c9f52ba0a3286940fa19bfa1e200db1f133229ef",
+          "report": {
+            "bounds_equal": true,
+            "nstates_equal": true,
+            "first_divergence": null,
+            "tdists_close": true,
+            "max_t_error": 3.126388037344441e-13,
+            "patterns_close": true,
+            "strengths_close": true,
+            "validation_level": "full-search-trace",
+            "trace_compared": true,
+            "moves_compared": false,
+            "trace_skipped_reason": null,
+            "moves_skipped_reason": "per-move fields unavailable or not requested",
+            "required_evidence_present": true,
+            "trace_values_close": true,
+            "first_numerical_divergence": null,
+            "passed": true
+          }
+        }
+      ]
+    },
+    {
+      "fixture_id": 2,
+      "recording_number": 3,
+      "recording_id": "sub-03_ses-02_stim03",
+      "experiment": 3,
+      "experiment_evidence": "Historical ADDITIONAL_EEG_PROVENANCE.md",
+      "subject_id": "03",
+      "session_id": "02",
+      "stimulus_id": "stim03",
+      "session_condition": "Rewatching with silent serial subtraction",
+      "view": "all64",
+      "shape": [
+        1754,
+        64
+      ],
+      "sampling_frequency_hz": 5.12,
+      "input_duration_s": 342.578125,
+      "bin_center_start_s": 0.09765625,
+      "bin_center_end_s": 342.48046875,
+      "selected_K": 173,
+      "channel_names": [
+        "Fp1",
+        "AF7",
+        "AF3",
+        "F1",
+        "F3",
+        "F5",
+        "F7",
+        "FT7",
+        "FC5",
+        "FC3",
+        "FC1",
+        "C1",
+        "C3",
+        "C5",
+        "T7",
+        "TP7",
+        "CP5",
+        "CP3",
+        "CP1",
+        "P1",
+        "P3",
+        "P5",
+        "P7",
+        "P9",
+        "PO7",
+        "PO3",
+        "O1",
+        "Iz",
+        "Oz",
+        "POz",
+        "Pz",
+        "CPz",
+        "Fpz",
+        "Fp2",
+        "AF8",
+        "AF4",
+        "Afz",
+        "Fz",
+        "F2",
+        "F4",
+        "F6",
+        "F8",
+        "FT8",
+        "FC6",
+        "FC4",
+        "FC2",
+        "FCz",
+        "Cz",
+        "C2",
+        "C4",
+        "C6",
+        "T8",
+        "TP8",
+        "CP6",
+        "CP4",
+        "CP2",
+        "P2",
+        "P4",
+        "P6",
+        "P8",
+        "P10",
+        "PO8",
+        "PO4",
+        "O2"
+      ],
+      "channel_mapping_note": "64-channel order recorded in the frozen manifest",
+      "input": "data/eeg/inputs/recording_2.npz",
+      "input_keys": {
+        "x": "x",
+        "times": "times"
+      },
+      "input_stored_dtype": "float32",
+      "fixture_dtype": "float32",
+      "fit_dtype": "float64",
+      "hashes": {
+        "fixture_npy_file_sha256": "a8c4b7753e51da5bc03f5775ab34dcc83749db12e9fe84d5f02e5f3e7cb1f9e1",
+        "times_npy_file_sha256": "5ff9fa4006959b26e348d02ea1531a90b2821938a9c28fcd546b8c34c1f952c0",
+        "fixture_array_float32_C_sha256": "abd920cbdd26a0015020c3429579d26b80a01e78cb007b13675322d5f7159f32",
+        "fit_array_float64_C_sha256": "0ee216cc6a58152795f95e150b42acc856628a60fd670bb49d5111d30adf06e3",
+        "times_array_float64_C_sha256": "1fdcace9418b01a091bcb5b5e3086b1d2c4aca5033298d69755e5959dbb3cdce",
+        "historical_base_matrix_input_hash": "a8c4b7753e51da5bc03f5775ab34dcc83749db12e9fe84d5f02e5f3e7cb1f9e1",
+        "raw_acquisition_sha256": null
+      },
+      "source_identifiers": {
+        "fit_id": "sub-03_ses-02_stim03__all64__5.12hz__d5__k172",
+        "spec_id": "ca02271846d32866",
+        "config_id": "d359ff6ebc2e7278"
+      },
+      "source_representation": "broadband_all64_5p12_blockmean_zscore_v1",
+      "historical_preprocessing_config_hash": "aa81dbc66e9ce43cffd3bac2dbaa5275aa3773ecb2ec0e2e16e0045fc033f8c8",
+      "historical_qc": {
+        "valid_fraction": 0.8112884834663626,
+        "longest_zero_flat_run_s": 0.0,
+        "formal_inclusion_status": "eligible"
+      },
+      "gsbs_parameters": {
+        "kmax": 172,
+        "dmin": 5,
+        "statewise_detection": true,
+        "finetune": 1,
+        "finetune_order": true,
+        "blocksize": 50
+      },
+      "rerun_target_software": {
+        "hpgsbs": "0.2.0",
+        "statesegmentation": "0.0.6"
+      },
+      "validated_release_compute_config": {
+        "kmax": 172,
+        "statewise_detection": true,
+        "finetune": 1,
+        "finetune_order": true,
+        "blocksize": 50,
+        "dmin": 5,
+        "dtype": "float64",
+        "q_strategy": "full",
+        "tile_size": 128,
+        "n_jobs": 1,
+        "blas_threads": 1,
+        "numba_threads": 1,
+        "memory_fraction": 0.55,
+        "trace": true,
+        "mode": "latency",
+        "tie_tolerance": 1e-11,
+        "candidate_backend": "streaming",
+        "candidate_chunk_size": 256,
+        "td_backend": "prefix2d",
+        "max_candidates": 50000000,
+        "max_fallback_elements": 50000000,
+        "max_workspace_bytes": 2147483648,
+        "max_pair_evaluations": 50000000,
+        "resident_min_candidates": 20000
+      },
+      "archived_output_note": "Historical saved outputs; exact HP distribution version is not asserted from unversioned NPZ metadata. v0.2.0 validation is documented separately in validation_history.json.",
+      "outputs": {
+        "cpu-fast": "data/eeg/outputs/recording_2_full_cpu.npz",
+        "torch-cuda": "data/eeg/outputs/recording_2_torch-cuda_float64.npz",
+        "triton-cuda": "data/eeg/outputs/recording_2_triton-cuda_float64.npz"
+      },
+      "historical_pipeline_output": "data/eeg/outputs/recording_2_historical_pipeline_cpu.npz",
+      "comparison_reference": "data/eeg/outputs/recording_2_full_cpu.npz",
+      "comparison_reference_type": "Historical official-validated CPU reference chain",
+      "historical_validation": [
+        {
+          "backend": "cpu-fast",
+          "source": "v0.1-full-validated-against-official-history",
+          "input_sha256": "0ee216cc6a58152795f95e150b42acc856628a60fd670bb49d5111d30adf06e3",
+          "report": {
+            "bounds_equal": true,
+            "nstates_equal": true,
+            "first_divergence": null,
+            "tdists_close": true,
+            "max_t_error": 0.0,
+            "patterns_close": true,
+            "strengths_close": true,
+            "validation_level": "full-search-trace",
+            "trace_compared": true,
+            "moves_compared": false,
+            "trace_skipped_reason": null,
+            "moves_skipped_reason": "per-move fields unavailable or not requested",
+            "required_evidence_present": true,
+            "trace_values_close": true,
+            "first_numerical_divergence": null,
+            "passed": true
+          }
+        },
+        {
+          "backend": "torch-cuda",
+          "source": "v0.1-full-validated-against-official-history",
+          "input_sha256": "0ee216cc6a58152795f95e150b42acc856628a60fd670bb49d5111d30adf06e3",
+          "report": {
+            "bounds_equal": true,
+            "nstates_equal": true,
+            "first_divergence": null,
+            "tdists_close": true,
+            "max_t_error": 2.7711166694643907e-13,
+            "patterns_close": true,
+            "strengths_close": true,
+            "validation_level": "full-search-trace",
+            "trace_compared": true,
+            "moves_compared": false,
+            "trace_skipped_reason": null,
+            "moves_skipped_reason": "per-move fields unavailable or not requested",
+            "required_evidence_present": true,
+            "trace_values_close": true,
+            "first_numerical_divergence": null,
+            "passed": true
+          }
+        },
+        {
+          "backend": "triton-cuda",
+          "source": "v0.1-full-validated-against-official-history",
+          "input_sha256": "0ee216cc6a58152795f95e150b42acc856628a60fd670bb49d5111d30adf06e3",
+          "report": {
+            "bounds_equal": true,
+            "nstates_equal": true,
+            "first_divergence": null,
+            "tdists_close": true,
+            "max_t_error": 2.7711166694643907e-13,
+            "patterns_close": true,
+            "strengths_close": true,
+            "validation_level": "full-search-trace",
+            "trace_compared": true,
+            "moves_compared": false,
+            "trace_skipped_reason": null,
+            "moves_skipped_reason": "per-move fields unavailable or not requested",
+            "required_evidence_present": true,
+            "trace_values_close": true,
+            "first_numerical_divergence": null,
+            "passed": true
+          }
+        }
+      ]
+    },
+    {
+      "fixture_id": 3,
+      "recording_number": 4,
+      "recording_id": "sub-04_ses-02_stim06",
+      "experiment": 3,
+      "experiment_evidence": "Historical ADDITIONAL_EEG_PROVENANCE.md",
+      "subject_id": "04",
+      "session_id": "02",
+      "stimulus_id": "stim06",
+      "session_condition": "Rewatching with silent serial subtraction",
+      "view": "all64",
+      "shape": [
+        1374,
+        64
+      ],
+      "sampling_frequency_hz": 5.12,
+      "input_duration_s": 268.359375,
+      "bin_center_start_s": 0.09765625,
+      "bin_center_end_s": 268.26171875,
+      "selected_K": 131,
+      "channel_names": [
+        "Fp1",
+        "AF7",
+        "AF3",
+        "F1",
+        "F3",
+        "F5",
+        "F7",
+        "FT7",
+        "FC5",
+        "FC3",
+        "FC1",
+        "C1",
+        "C3",
+        "C5",
+        "T7",
+        "TP7",
+        "CP5",
+        "CP3",
+        "CP1",
+        "P1",
+        "P3",
+        "P5",
+        "P7",
+        "P9",
+        "PO7",
+        "PO3",
+        "O1",
+        "Iz",
+        "Oz",
+        "POz",
+        "Pz",
+        "CPz",
+        "Fpz",
+        "Fp2",
+        "AF8",
+        "AF4",
+        "Afz",
+        "Fz",
+        "F2",
+        "F4",
+        "F6",
+        "F8",
+        "FT8",
+        "FC6",
+        "FC4",
+        "FC2",
+        "FCz",
+        "Cz",
+        "C2",
+        "C4",
+        "C6",
+        "T8",
+        "TP8",
+        "CP6",
+        "CP4",
+        "CP2",
+        "P2",
+        "P4",
+        "P6",
+        "P8",
+        "P10",
+        "PO8",
+        "PO4",
+        "O2"
+      ],
+      "channel_mapping_note": "64-channel order recorded in the frozen manifest",
+      "input": "data/eeg/inputs/recording_3.npz",
+      "input_keys": {
+        "x": "x",
+        "times": "times"
+      },
+      "input_stored_dtype": "float32",
+      "fixture_dtype": "float32",
+      "fit_dtype": "float64",
+      "hashes": {
+        "fixture_npy_file_sha256": "6bf750781980a958265263f427ee442509fc58e27e146e7a9018066c701a2e30",
+        "times_npy_file_sha256": "9a71a7a494cd52ab2eb2e2f2b22bdbe380446e472ff008211dbb6e48a3431c20",
+        "fixture_array_float32_C_sha256": "02e7b7b486ff19e64c77f6efcf559ef901324331dd812b23539f93c211803f49",
+        "fit_array_float64_C_sha256": "3ca7444bb63864866766f329d45a5ebc5fa9bd58b31fe425cbb09e33192ec35d",
+        "times_array_float64_C_sha256": "db0f63c674197a287f0e0e7cd61967e8fbef6e66c78967dfca9f02150c8bc113",
+        "historical_base_matrix_input_hash": "6bf750781980a958265263f427ee442509fc58e27e146e7a9018066c701a2e30",
+        "raw_acquisition_sha256": null
+      },
+      "source_identifiers": {
+        "fit_id": "sub-04_ses-02_stim06__all64__5.12hz__d5__k135",
+        "spec_id": "65ff643d1b8a0bb4",
+        "config_id": "d359ff6ebc2e7278"
+      },
+      "source_representation": "broadband_all64_5p12_blockmean_zscore_v1",
+      "historical_preprocessing_config_hash": "aa81dbc66e9ce43cffd3bac2dbaa5275aa3773ecb2ec0e2e16e0045fc033f8c8",
+      "historical_qc": {
+        "valid_fraction": 0.6768558951965066,
+        "longest_zero_flat_run_s": 0.0,
+        "formal_inclusion_status": "eligible"
+      },
+      "gsbs_parameters": {
+        "kmax": 135,
+        "dmin": 5,
+        "statewise_detection": true,
+        "finetune": 1,
+        "finetune_order": true,
+        "blocksize": 50
+      },
+      "rerun_target_software": {
+        "hpgsbs": "0.2.0",
+        "statesegmentation": "0.0.6"
+      },
+      "validated_release_compute_config": {
+        "kmax": 135,
+        "statewise_detection": true,
+        "finetune": 1,
+        "finetune_order": true,
+        "blocksize": 50,
+        "dmin": 5,
+        "dtype": "float64",
+        "q_strategy": "full",
+        "tile_size": 128,
+        "n_jobs": 1,
+        "blas_threads": 1,
+        "numba_threads": 1,
+        "memory_fraction": 0.55,
+        "trace": true,
+        "mode": "latency",
+        "tie_tolerance": 1e-11,
+        "candidate_backend": "streaming",
+        "candidate_chunk_size": 256,
+        "td_backend": "prefix2d",
+        "max_candidates": 50000000,
+        "max_fallback_elements": 50000000,
+        "max_workspace_bytes": 2147483648,
+        "max_pair_evaluations": 50000000,
+        "resident_min_candidates": 20000
+      },
+      "archived_output_note": "Historical saved outputs; exact HP distribution version is not asserted from unversioned NPZ metadata. v0.2.0 validation is documented separately in validation_history.json.",
+      "outputs": {
+        "cpu-fast": "data/eeg/outputs/recording_3_full_cpu.npz",
+        "torch-cuda": "data/eeg/outputs/recording_3_torch-cuda_float64.npz",
+        "triton-cuda": "data/eeg/outputs/recording_3_triton-cuda_float64.npz"
+      },
+      "historical_pipeline_output": "data/eeg/outputs/recording_3_historical_pipeline_cpu.npz",
+      "comparison_reference": "data/eeg/outputs/recording_3_full_cpu.npz",
+      "comparison_reference_type": "Historical official-validated CPU reference chain",
+      "historical_validation": [
+        {
+          "backend": "cpu-fast",
+          "source": "v0.1-full-validated-against-official-history",
+          "input_sha256": "3ca7444bb63864866766f329d45a5ebc5fa9bd58b31fe425cbb09e33192ec35d",
+          "report": {
+            "bounds_equal": true,
+            "nstates_equal": true,
+            "first_divergence": null,
+            "tdists_close": true,
+            "max_t_error": 0.0,
+            "patterns_close": true,
+            "strengths_close": true,
+            "validation_level": "full-search-trace",
+            "trace_compared": true,
+            "moves_compared": false,
+            "trace_skipped_reason": null,
+            "moves_skipped_reason": "per-move fields unavailable or not requested",
+            "required_evidence_present": true,
+            "trace_values_close": true,
+            "first_numerical_divergence": null,
+            "passed": true
+          }
+        },
+        {
+          "backend": "torch-cuda",
+          "source": "v0.1-full-validated-against-official-history",
+          "input_sha256": "3ca7444bb63864866766f329d45a5ebc5fa9bd58b31fe425cbb09e33192ec35d",
+          "report": {
+            "bounds_equal": true,
+            "nstates_equal": true,
+            "first_divergence": null,
+            "tdists_close": true,
+            "max_t_error": 1.8474111129762605e-13,
+            "patterns_close": true,
+            "strengths_close": true,
+            "validation_level": "full-search-trace",
+            "trace_compared": true,
+            "moves_compared": false,
+            "trace_skipped_reason": null,
+            "moves_skipped_reason": "per-move fields unavailable or not requested",
+            "required_evidence_present": true,
+            "trace_values_close": true,
+            "first_numerical_divergence": null,
+            "passed": true
+          }
+        },
+        {
+          "backend": "triton-cuda",
+          "source": "v0.1-full-validated-against-official-history",
+          "input_sha256": "3ca7444bb63864866766f329d45a5ebc5fa9bd58b31fe425cbb09e33192ec35d",
+          "report": {
+            "bounds_equal": true,
+            "nstates_equal": true,
+            "first_divergence": null,
+            "tdists_close": true,
+            "max_t_error": 1.8474111129762605e-13,
+            "patterns_close": true,
+            "strengths_close": true,
+            "validation_level": "full-search-trace",
+            "trace_compared": true,
+            "moves_compared": false,
+            "trace_skipped_reason": null,
+            "moves_skipped_reason": "per-move fields unavailable or not requested",
+            "required_evidence_present": true,
+            "trace_values_close": true,
+            "first_numerical_divergence": null,
+            "passed": true
+          }
+        }
+      ]
+    }
+  ],
+  "files": {
+    "figure_sources/figure3/data/0_full_cpu.npz": {
+      "source": {
+        "repository": "JustinZHAO-05/HP-GSBS-SoftwareX",
+        "commit": "851f376cecf86285a1cdd46de9aa96a8240f8923",
+        "path": "results/fixtures/0_full_cpu.npz",
+        "size_bytes": 500164,
+        "sha256": "b8a44f5c4fed13a30d93e8ad8b016ae1d1ef306fdf52ab9514b58df04ed5c1c9",
+        "git_blob_sha1": "51d28bcd961e7d06854c3fd40773ddbe02088fbb"
+      },
+      "transformation": "None; byte-identical NPZ"
+    },
+    "figure_sources/figure3/data/0_torch-cuda_float64.npz": {
+      "source": {
+        "repository": "JustinZHAO-05/HP-GSBS-SoftwareX",
+        "commit": "851f376cecf86285a1cdd46de9aa96a8240f8923",
+        "path": "results/fixtures/0_torch-cuda_float64.npz",
+        "size_bytes": 500372,
+        "sha256": "8cc565cc1813d6e02dd9ad23cb94f343cb45b851190cde3d9af7ff8f3f1318e2",
+        "git_blob_sha1": "0c3109e67941d8c56dc6c84bc7f6beb792d8ad84"
+      },
+      "transformation": "None; byte-identical NPZ"
+    },
+    "figure_sources/figure3/data/0_triton-cuda_float64.npz": {
+      "source": {
+        "repository": "JustinZHAO-05/HP-GSBS-SoftwareX",
+        "commit": "851f376cecf86285a1cdd46de9aa96a8240f8923",
+        "path": "results/fixtures/0_triton-cuda_float64.npz",
+        "size_bytes": 500356,
+        "sha256": "b22ea2e691d6a959b28e803abe187df22695635122114fdb5b3ba59f2e624c2d",
+        "git_blob_sha1": "e8c2b13f4c853661126916b72910a752ae437784"
+      },
+      "transformation": "None; byte-identical NPZ"
+    },
+    "figure_sources/figure3/data/0_full_reference.npz": {
+      "source": {
+        "repository": "JustinZHAO-05/HP-GSBS-SoftwareX",
+        "commit": "851f376cecf86285a1cdd46de9aa96a8240f8923",
+        "path": "results/fixtures/0_full_reference.npz",
+        "size_bytes": 501341,
+        "sha256": "ce7cd2dcacbfe849da226fd06cb81d8e2146d8c55198dc8aaddafbea3405aec3",
+        "git_blob_sha1": "90e4eecd571e8935633917bdb947a730931987b9"
+      },
+      "transformation": "None; byte-identical NPZ"
+    },
+    "figure_sources/figure3/data/sub-01_ses-01_stim01__all64__5.12hz__d5__k131.npz": {
+      "source": {
+        "repository": "JustinZHAO-05/HP-GSBS-SoftwareX",
+        "commit": "851f376cecf86285a1cdd46de9aa96a8240f8923",
+        "path": "results/bbbd_validation/sub-01_ses-01_stim01__all64__5.12hz__d5__k131.npz",
+        "size_bytes": 434067,
+        "sha256": "ef78bd50c4faff50f5259a993250a1c2fec3f3ac4754b95011550b6a18c8bf92",
+        "git_blob_sha1": "4dab40b39b143d993742117aba1074c12dbd3049"
+      },
+      "transformation": "None; byte-identical NPZ"
+    },
+    "data/eeg/outputs/recording_1_full_cpu.npz": {
+      "source": {
+        "repository": "JustinZHAO-05/HP-GSBS-SoftwareX",
+        "commit": "851f376cecf86285a1cdd46de9aa96a8240f8923",
+        "path": "results/fixtures/1_full_cpu.npz",
+        "size_bytes": 358154,
+        "sha256": "256e28adf319d458f42432895c7879ae770bc54b8acb928a9d770e50b9fc077e",
+        "git_blob_sha1": "74e7345095454ce946fff1883f32bbf5f484cee2"
+      },
+      "transformation": "None; byte-identical NPZ"
+    },
+    "data/eeg/outputs/recording_1_torch-cuda_float64.npz": {
+      "source": {
+        "repository": "JustinZHAO-05/HP-GSBS-SoftwareX",
+        "commit": "851f376cecf86285a1cdd46de9aa96a8240f8923",
+        "path": "results/fixtures/1_torch-cuda_float64.npz",
+        "size_bytes": 358356,
+        "sha256": "01594e0cdaaa82186b133e110f1a09448ec683b91d1609903dc958611ce1b170",
+        "git_blob_sha1": "d6f5c5234723eb65d42d2bac920e7f541be71498"
+      },
+      "transformation": "None; byte-identical NPZ"
+    },
+    "data/eeg/outputs/recording_1_triton-cuda_float64.npz": {
+      "source": {
+        "repository": "JustinZHAO-05/HP-GSBS-SoftwareX",
+        "commit": "851f376cecf86285a1cdd46de9aa96a8240f8923",
+        "path": "results/fixtures/1_triton-cuda_float64.npz",
+        "size_bytes": 358386,
+        "sha256": "4060709463b82598f4f3a80cf4f59541f7cbf80250081fb03c4932bbc22a9a72",
+        "git_blob_sha1": "bd524eed1d02d3f15583f541dbc30afec9f7f8d3"
+      },
+      "transformation": "None; byte-identical NPZ"
+    },
+    "data/eeg/outputs/recording_1_historical_pipeline_cpu.npz": {
+      "source": {
+        "repository": "JustinZHAO-05/HP-GSBS-SoftwareX",
+        "commit": "851f376cecf86285a1cdd46de9aa96a8240f8923",
+        "path": "results/bbbd_validation/sub-02_ses-01_stim02__frontal__5.12hz__d5__k121.npz",
+        "size_bytes": 302820,
+        "sha256": "6d5ede7625dbdbede1d568c346604564bc1b48cd795312764fad98f29f4e3def",
+        "git_blob_sha1": "6f3520568659f030b7474383152e06e2b6156ef1"
+      },
+      "transformation": "None; byte-identical NPZ"
+    },
+    "data/eeg/inputs/recording_1.npz": {
+      "source_arrays": {
+        "x": {
+          "repository": "JustinZHAO-05/HP-GSBS-SoftwareX",
+          "commit": "851f376cecf86285a1cdd46de9aa96a8240f8923",
+          "path": "results/fixtures/1.npy",
+          "size_bytes": 237824,
+          "sha256": "ebb6b6d16efc0ae151df436f7a16b11fa8b2146b4c0470388629748d4a58073b",
+          "git_blob_sha1": "19a409c3e50719f80b04b57125b73edcdbf9a075"
+        },
+        "times": {
+          "repository": "JustinZHAO-05/HP-GSBS-SoftwareX",
+          "commit": "851f376cecf86285a1cdd46de9aa96a8240f8923",
+          "path": "results/fixtures/1_times.npy",
+          "size_bytes": 14984,
+          "sha256": "b4edbf66589bd342157199d7d23d9a844b8a8d627d34a2887c9514c2e206a4c0",
+          "git_blob_sha1": "5412ab238978c8211f7c323555b062f22a94409d"
+        }
+      },
+      "transformation": "Lossless NPZ container; original float32 x and float64 times"
+    },
+    "data/eeg/outputs/recording_2_full_cpu.npz": {
+      "source": {
+        "repository": "JustinZHAO-05/HP-GSBS-SoftwareX",
+        "commit": "851f376cecf86285a1cdd46de9aa96a8240f8923",
+        "path": "results/fixtures/2_full_cpu.npz",
+        "size_bytes": 665067,
+        "sha256": "5a29755bb6df8300805f0b5ff488f09f636fbec370f9cfc96d46aff0fc2d74bf",
+        "git_blob_sha1": "eb1ef21a203e552addc9936fbcc1ea238610ea0e"
+      },
+      "transformation": "None; byte-identical NPZ"
+    },
+    "data/eeg/outputs/recording_2_torch-cuda_float64.npz": {
+      "source": {
+        "repository": "JustinZHAO-05/HP-GSBS-SoftwareX",
+        "commit": "851f376cecf86285a1cdd46de9aa96a8240f8923",
+        "path": "results/fixtures/2_torch-cuda_float64.npz",
+        "size_bytes": 665243,
+        "sha256": "b86b9de1118574a4345553a45ef77232ecb8f12e1cc73647c8b78ddf9566fb6b",
+        "git_blob_sha1": "5b91f821c498de4e7b11eb7ab356c64963246c75"
+      },
+      "transformation": "None; byte-identical NPZ"
+    },
+    "data/eeg/outputs/recording_2_triton-cuda_float64.npz": {
+      "source": {
+        "repository": "JustinZHAO-05/HP-GSBS-SoftwareX",
+        "commit": "851f376cecf86285a1cdd46de9aa96a8240f8923",
+        "path": "results/fixtures/2_triton-cuda_float64.npz",
+        "size_bytes": 665244,
+        "sha256": "2360c86ea987dfb45c70ba32163df925cd5e56051cfe2fe01d550230c8f39c6b",
+        "git_blob_sha1": "6f5f262687bf68ffd4014ee4dbe719bd1491bd02"
+      },
+      "transformation": "None; byte-identical NPZ"
+    },
+    "data/eeg/outputs/recording_2_historical_pipeline_cpu.npz": {
+      "source": {
+        "repository": "JustinZHAO-05/HP-GSBS-SoftwareX",
+        "commit": "851f376cecf86285a1cdd46de9aa96a8240f8923",
+        "path": "results/bbbd_validation/sub-03_ses-02_stim03__all64__5.12hz__d5__k172.npz",
+        "size_bytes": 577818,
+        "sha256": "ab2c99ea97eb54559a9513f15b91574067600d89f852586f64e9cde675889b65",
+        "git_blob_sha1": "5bd77c84c7a46b55dd0efc92526f6854b16ad141"
+      },
+      "transformation": "None; byte-identical NPZ"
+    },
+    "data/eeg/inputs/recording_2.npz": {
+      "source_arrays": {
+        "x": {
+          "repository": "JustinZHAO-05/HP-GSBS-SoftwareX",
+          "commit": "851f376cecf86285a1cdd46de9aa96a8240f8923",
+          "path": "results/fixtures/2.npy",
+          "size_bytes": 449152,
+          "sha256": "a8c4b7753e51da5bc03f5775ab34dcc83749db12e9fe84d5f02e5f3e7cb1f9e1",
+          "git_blob_sha1": "f2b7f3a07c352e30b72f9d958b3f45b90d527f2a"
+        },
+        "times": {
+          "repository": "JustinZHAO-05/HP-GSBS-SoftwareX",
+          "commit": "851f376cecf86285a1cdd46de9aa96a8240f8923",
+          "path": "results/fixtures/2_times.npy",
+          "size_bytes": 14160,
+          "sha256": "5ff9fa4006959b26e348d02ea1531a90b2821938a9c28fcd546b8c34c1f952c0",
+          "git_blob_sha1": "aa67749382e2bcc4b8f99e3b4dc8496667fd05a4"
+        }
+      },
+      "transformation": "Lossless NPZ container; original float32 x and float64 times"
+    },
+    "data/eeg/outputs/recording_3_full_cpu.npz": {
+      "source": {
+        "repository": "JustinZHAO-05/HP-GSBS-SoftwareX",
+        "commit": "851f376cecf86285a1cdd46de9aa96a8240f8923",
+        "path": "results/fixtures/3_full_cpu.npz",
+        "size_bytes": 513235,
+        "sha256": "6b27a8a1216d517aa238ec1fe563f3950d40321d91bc207d83409172f7e707dc",
+        "git_blob_sha1": "7f95b6e469c28710dc3606b47589c2e3fff4948f"
+      },
+      "transformation": "None; byte-identical NPZ"
+    },
+    "data/eeg/outputs/recording_3_torch-cuda_float64.npz": {
+      "source": {
+        "repository": "JustinZHAO-05/HP-GSBS-SoftwareX",
+        "commit": "851f376cecf86285a1cdd46de9aa96a8240f8923",
+        "path": "results/fixtures/3_torch-cuda_float64.npz",
+        "size_bytes": 513470,
+        "sha256": "407257544103df31690ba075bb7d7641199c71845f1b8a3629cde323299e4259",
+        "git_blob_sha1": "03dc6de2506bce73dac45710c1ab01157fad23ff"
+      },
+      "transformation": "None; byte-identical NPZ"
+    },
+    "data/eeg/outputs/recording_3_triton-cuda_float64.npz": {
+      "source": {
+        "repository": "JustinZHAO-05/HP-GSBS-SoftwareX",
+        "commit": "851f376cecf86285a1cdd46de9aa96a8240f8923",
+        "path": "results/fixtures/3_triton-cuda_float64.npz",
+        "size_bytes": 513455,
+        "sha256": "c4f5f3babf3e9a6abed00869608bbe397b9ffe703349849067e3ad5d11f4c861",
+        "git_blob_sha1": "bfece02c8750241eecc1b4185e42c072fe045f30"
+      },
+      "transformation": "None; byte-identical NPZ"
+    },
+    "data/eeg/outputs/recording_3_historical_pipeline_cpu.npz": {
+      "source": {
+        "repository": "JustinZHAO-05/HP-GSBS-SoftwareX",
+        "commit": "851f376cecf86285a1cdd46de9aa96a8240f8923",
+        "path": "results/bbbd_validation/sub-04_ses-02_stim06__all64__5.12hz__d5__k135.npz",
+        "size_bytes": 450094,
+        "sha256": "4570dc6ecfe1c5aada275377279976dc2ade37a2b142b0e2c418b033500d8c3f",
+        "git_blob_sha1": "5f52afbad98adef1621e98b049384795c4a93de9"
+      },
+      "transformation": "None; byte-identical NPZ"
+    },
+    "data/eeg/inputs/recording_3.npz": {
+      "source_arrays": {
+        "x": {
+          "repository": "JustinZHAO-05/HP-GSBS-SoftwareX",
+          "commit": "851f376cecf86285a1cdd46de9aa96a8240f8923",
+          "path": "results/fixtures/3.npy",
+          "size_bytes": 351872,
+          "sha256": "6bf750781980a958265263f427ee442509fc58e27e146e7a9018066c701a2e30",
+          "git_blob_sha1": "3f1b00a7938afeae8a918d5b6f3756544c0b69f6"
+        },
+        "times": {
+          "repository": "JustinZHAO-05/HP-GSBS-SoftwareX",
+          "commit": "851f376cecf86285a1cdd46de9aa96a8240f8923",
+          "path": "results/fixtures/3_times.npy",
+          "size_bytes": 11120,
+          "sha256": "9a71a7a494cd52ab2eb2e2f2b22bdbe380446e472ff008211dbb6e48a3431c20",
+          "git_blob_sha1": "7184551b6050e8a6ab6f4495df9657e5b93daf62"
+        }
+      },
+      "transformation": "Lossless NPZ container; original float32 x and float64 times"
+    }
+  },
+  "fits_executed_in_stage2": 0
+}

@@ -2,6 +2,7 @@
 """Check the delivered numerical tables against recorded observations; no fits."""
 from __future__ import annotations
 import json
+import runpy
 from pathlib import Path
 import numpy as np
 import pandas as pd
@@ -45,7 +46,8 @@ def main() -> None:
             if route+'__all_bounds' in a.files:
                 np.testing.assert_array_equal(a[route+'__all_bounds'], a['official__all_bounds'])
         assert max(errors.values()) < 1.6e-11
-    print(json.dumps(dict(passed=True, timed_observations=len(raw),
+    eeg = runpy.run_path(str(ROOT/'data/eeg/verify_eeg_all.py'))['verify']()
+    print(json.dumps(dict(passed=True, eeg_recordings_verified=len(eeg['records']), timed_observations=len(raw),
         configuration_seed_cases=14, distinct_inputs=n_inputs,
         synthetic_max_abs_tdistance_errors=errors,
         scope='Arithmetic and input-identity checks on supplied records; no model refit'), indent=2))
