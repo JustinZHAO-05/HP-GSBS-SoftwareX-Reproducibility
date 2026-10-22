@@ -2,7 +2,7 @@
 
 Data and scripts for **HP-GSBS: Accelerating greedy state boundary search with reusable interval statistics**, by Yanzhe Zhao and Yongzhang Ji. This independent research package reconstructs six main figures and the accompanying numerical tables, supplies four frozen BBBD EEG analysis inputs and saved outputs, and provides the complete Sherlock angular-gyrus application for a group response and 16 participants.
 
-**Research-material version: 1.1.0.** The [algorithm software](https://github.com/JustinZHAO-05/HP-GSBS) remains fixed to **0.2.0**, release commit `b86b409169aa173d4a361d8cbcc633add1bfacf6`, [software DOI 10.5281/zenodo.23422148](https://doi.org/10.5281/zenodo.23422148).
+**Research-material version: 1.1.0 · [DOI 10.5281/zenodo.23573202](https://doi.org/10.5281/zenodo.23573202).** The [algorithm software](https://github.com/JustinZHAO-05/HP-GSBS) remains fixed to **0.2.0**, release commit `b86b409169aa173d4a361d8cbcc633add1bfacf6`, [software DOI 10.5281/zenodo.23422148](https://doi.org/10.5281/zenodo.23422148).
 
 The [current author manuscript and Online Resource 1](manuscript/README.md) are prepared for *Neuroinformatics*. The [arXiv preprint](https://arxiv.org/abs/2610.25898) supplies the current persistent article identifier. See [release notes](RELEASE_NOTES.md) and [archive identities](docs/ZENODO.md) for the research-material version history.
 
@@ -76,6 +76,6 @@ CUDA reruns additionally require compatible PyTorch/Triton installations followi
 
 Original repository code is **MIT** ([LICENSE](LICENSE)). Source datasets and applicable derived inputs, numerical materials, figures and documentation retain **CC BY 4.0** attribution ([LICENSE-DATA](LICENSE-DATA), [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)). The source collection and dataset credit remain with the BBBD and Sherlock creators.
 
-Cite this package using the exact [release](https://github.com/JustinZHAO-05/HP-GSBS-SoftwareX-Reproducibility/releases/tag/v1.1.0) or Git commit and `CITATION.cff`. The research archive series is [10.5281/zenodo.23457341](https://doi.org/10.5281/zenodo.23457341); the earlier **v1.0.1** archive remains [10.5281/zenodo.23457342](https://doi.org/10.5281/zenodo.23457342). Version-specific archive identities are maintained in [docs/ZENODO.md](docs/ZENODO.md). Cite HP-GSBS 0.2.0, the original GSBS papers and the datasets when using them; BibTeX source entries are in `references.bib`.
+Cite this package using [DOI 10.5281/zenodo.23573202](https://doi.org/10.5281/zenodo.23573202), the exact [release](https://github.com/JustinZHAO-05/HP-GSBS-SoftwareX-Reproducibility/releases/tag/v1.1.0) or Git commit and `CITATION.cff`. The research archive series is [10.5281/zenodo.23457341](https://doi.org/10.5281/zenodo.23457341); the earlier **v1.0.1** archive remains [10.5281/zenodo.23457342](https://doi.org/10.5281/zenodo.23457342). Version-specific archive identities are maintained in [docs/ZENODO.md](docs/ZENODO.md). Cite HP-GSBS 0.2.0, the original GSBS papers and the datasets when using them; BibTeX source entries are in `references.bib`.
 
 **Yanzhe Zhao** — main contributor and maintainer; algorithm implementation, experiments, data preparation, figures and manuscript. **Yongzhang Ji** — theoretical/methodological analysis and manuscript review. Contact: justinzhaoyz@outlook.com.

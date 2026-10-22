@@ -1,5 +1,7 @@
 # v1.1.0 — Complete EEG/fMRI research materials (2026-10-22)
 
+Archived automatically at [10.5281/zenodo.23573202](https://doi.org/10.5281/zenodo.23573202), GitHub release commit `126043d11050368dbbcffae8f512eda65e6c4648`. The actual DOI was added to main after archival; the release tag remains fixed.
+
 - Adopted the journal-neutral title **HP-GSBS: Reproducibility Materials for Neural-State Segmentation and Performance Evaluation**, with the repository URL retained.
 - Consolidated all four frozen BBBD EEG matrices, time maps, saved FP64 outputs and provenance. Recording 1 includes the original complete reference output; Recordings 2–4 retain the historically official-validated CPU reference chain.
 - Added the complete Sherlock group/16-participant application: 17 saved segmentations, configuration, fit times, selected boundaries, state-count curves, 120-pair alignment and 1,000 circular-shift scores.

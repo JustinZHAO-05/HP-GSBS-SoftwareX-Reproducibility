@@ -1,0 +1,59 @@
+{
+  "record_id": 23573202,
+  "version_doi": "10.5281/zenodo.23573202",
+  "concept_doi": "10.5281/zenodo.23457341",
+  "title": "HP-GSBS: Reproducibility Materials for Neural-State Segmentation and Performance Evaluation",
+  "version": "1.1.0",
+  "github_release_commit": "126043d11050368dbbcffae8f512eda65e6c4648",
+  "creators": [
+    {
+      "name": "Zhao, Yanzhe",
+      "affiliation": "School of Future Technology, Tianjin University"
+    },
+    {
+      "name": "Ji, Yongzhang",
+      "affiliation": "Faculty of Psychology, Southwest University"
+    }
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/JustinZHAO-05/HP-GSBS-SoftwareX-Reproducibility/tree/v1.1.0",
+      "relation": "isIdenticalTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "10.5281/zenodo.23457342",
+      "relation": "isNewVersionOf",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.23422148",
+      "relation": "requires",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.48550/arXiv.2610.25898",
+      "relation": "isSupplementTo",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.6084/m9.figshare.12436955.v1",
+      "relation": "isDerivedFrom",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.15387/fcp_indi.retro.bbbd",
+      "relation": "isDerivedFrom",
+      "scheme": "doi"
+    }
+  ],
+  "files": [
+    {
+      "key": "JustinZHAO-05/HP-GSBS-SoftwareX-Reproducibility-v1.1.0.zip",
+      "size": 20384448,
+      "checksum": "md5:c34165853dc2b5c636c76123346c2e41"
+    }
+  ],
+  "checked_at_utc": "2026-10-22T17:28:25.731906+00:00",
+  "verification_scope": "Archive metadata, title/version/author identity, concept DOI and GitHub release relationship; release contents checked from a fresh GitHub clone."
+}

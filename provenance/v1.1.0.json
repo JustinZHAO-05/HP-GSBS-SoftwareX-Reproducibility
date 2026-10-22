@@ -21,5 +21,8 @@
   "licenses": {
     "original_code": "MIT",
     "datasets_and_applicable_derivatives": "CC-BY-4.0"
-  }
+  },
+  "archive_doi": "10.5281/zenodo.23573202",
+  "archive_record_id": 23573202,
+  "release_commit": "126043d11050368dbbcffae8f512eda65e6c4648"
 }
