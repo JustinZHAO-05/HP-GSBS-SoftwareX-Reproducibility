@@ -55,5 +55,20 @@
     }
   ],
   "checked_at_utc": "2026-10-22T17:28:25.731906+00:00",
-  "verification_scope": "Archive metadata, title/version/author identity, concept DOI and GitHub release relationship; release contents checked from a fresh GitHub clone."
+  "verification_scope": "Archive metadata, title/version/author identity, concept DOI and GitHub release relationship; release contents checked from a fresh GitHub clone.",
+  "archive_byte_verification": {
+    "doi": "10.5281/zenodo.23573202",
+    "version": "1.1.0",
+    "git_tag": "v1.1.0",
+    "git_commit": "126043d11050368dbbcffae8f512eda65e6c4648",
+    "archive_file": "JustinZHAO-05/HP-GSBS-SoftwareX-Reproducibility-v1.1.0.zip",
+    "archive_md5": "md5:c34165853dc2b5c636c76123346c2e41",
+    "archive_sha256": "b7db9f7fc0cbdb1c6404269e27848d539e10f636df5e7c6c77b39c4923d529e1",
+    "archive_size": 20384448,
+    "tracked_files_compared": 161,
+    "byte_mismatches": [],
+    "file_set_matches": true,
+    "verified_on_utc": "2026-10-22",
+    "note": "Actual archive bytes compared against all fixed-tag files before replacement packaging."
+  }
 }
